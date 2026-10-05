@@ -30,42 +30,42 @@ const experiences = [
 ];
 ---
 
-<section id="booking" class="py-24 bg-black text-white border-t border-white/10">
-  <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+<section id="booking" class="py-24 bg-[#050505] text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-    <!-- Section Header in GoodBoyBob Style -->
+    <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/10 gap-6">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
           By Reservation Only
         </span>
         <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
-          TASTING <span class="font-serif italic font-normal text-amber-300">ROOM EXPERIENCES</span>
+          TASTING <span class="font-serif italic font-normal text-[#c5a059]">experiences</span>
         </h2>
       </div>
-      <p class="text-gray-400 font-sans text-sm sm:text-base max-w-md leading-relaxed">
+      <p class="text-gray-300 font-sans text-sm sm:text-base max-w-md leading-relaxed">
         Immersion into coffee perfection at our volcanic estate. Reservations are strictly limited to private groups to ensure personalized masterclasses.
       </p>
     </div>
 
-    <!-- Experience Cards Grid in GoodBoyBob Style -->
+    <!-- Experience Cards Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
       {experiences.map((exp) => (
-        <div class="bg-[#0b0b0b] border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400/60 transition-colors group">
+        <div class="bg-[#0d0d0d] border border-[#c5a059]/20 p-8 flex flex-col justify-between hover:border-[#c5a059] transition-all duration-300 group">
 
           <div>
             <div class="flex items-center justify-between mb-6">
-              <span class="text-[10px] font-mono uppercase tracking-widest font-bold text-amber-300 border border-amber-400/30 px-3 py-1 bg-amber-400/10">
+              <span class="text-[10px] font-mono uppercase tracking-widest font-bold text-[#c5a059] border border-[#c5a059]/30 px-3 py-1 bg-[#c5a059]/10">
                 {exp.tag}
               </span>
               <span class="text-xs font-mono text-gray-400">{exp.duration}</span>
             </div>
 
-            <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-amber-300 transition-colors">
+            <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-[#c5a059] transition-colors">
               {exp.title}
             </h3>
 
-            <div class="font-mono text-3xl font-black text-white mb-6">
+            <div class="font-mono text-3xl font-bold text-[#c5a059] mb-6">
               {exp.price} <span class="text-xs text-gray-400 font-normal">/ guest</span>
             </div>
 
@@ -76,7 +76,7 @@ const experiences = [
             <div class="space-y-2.5 pt-6 border-t border-white/10 mb-8 font-mono text-xs text-gray-300">
               {exp.includes.map((inc) => (
                 <div class="flex items-center gap-2">
-                  <span class="text-amber-400">✓</span>
+                  <span class="text-[#c5a059]">✓</span>
                   <span>{inc}</span>
                 </div>
               ))}
@@ -85,7 +85,7 @@ const experiences = [
 
           <button
             data-experience={exp.title}
-            class="booking-select-btn w-full py-3.5 text-xs font-mono uppercase tracking-widest font-black text-black bg-white hover:bg-amber-400 transition-colors text-center"
+            class="booking-select-btn w-full py-3.5 text-xs font-mono uppercase tracking-widest font-bold text-black bg-[#c5a059] hover:bg-[#e6d7c3] transition-colors text-center shadow-lg"
           >
             Select Experience
           </button>
@@ -94,12 +94,12 @@ const experiences = [
       ))}
     </div>
 
-    <!-- Interactive Reservation Form in High-Contrast GoodBoyBob Block Style -->
-    <div class="max-w-4xl mx-auto bg-[#0a0a0a] p-8 sm:p-12 border border-white/10 relative">
+    <!-- Interactive Reservation Form -->
+    <div class="max-w-4xl mx-auto bg-[#0d0d0d] p-8 sm:p-12 border border-[#c5a059]/30 relative">
       <div class="text-center mb-10">
-        <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block mb-2">Concierge Reservation</span>
+        <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] block mb-2">Concierge Reservation</span>
         <h3 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-2">Reserve Your Private Session</h3>
-        <p class="text-xs font-mono text-gray-400">Direct instant confirmation via WhatsApp Concierge or direct booking email.</p>
+        <p class="text-xs font-mono text-gray-400">Direct instant confirmation via WhatsApp Concierge or email.</p>
       </div>
 
       <form id="tasting-form" class="space-y-6 font-mono text-xs">
@@ -111,7 +111,7 @@ const experiences = [
               required
               id="booking-name"
               placeholder="e.g. Elena Rostova"
-              class="w-full bg-black border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors"
+              class="w-full bg-[#050505] border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#c5a059] transition-colors"
             />
           </div>
 
@@ -119,7 +119,7 @@ const experiences = [
             <label class="block uppercase text-gray-300 mb-2 font-bold">Selected Experience</label>
             <select
               id="booking-experience"
-              class="w-full bg-black border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors"
+              class="w-full bg-[#050505] border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#c5a059] transition-colors"
             >
               {experiences.map((exp) => (
                 <option value={exp.title}>{exp.title}</option>
@@ -135,7 +135,7 @@ const experiences = [
               type="date"
               required
               id="booking-date"
-              class="w-full bg-black border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors"
+              class="w-full bg-[#050505] border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#c5a059] transition-colors"
             />
           </div>
 
@@ -143,7 +143,7 @@ const experiences = [
             <label class="block uppercase text-gray-300 mb-2 font-bold">Time Slot</label>
             <select
               id="booking-time"
-              class="w-full bg-black border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors"
+              class="w-full bg-[#050505] border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#c5a059] transition-colors"
             >
               <option value="09:00 AM">09:00 AM (Morning Brew)</option>
               <option value="11:30 AM">11:30 AM (Midday Flight)</option>
@@ -156,7 +156,7 @@ const experiences = [
             <label class="block uppercase text-gray-300 mb-2 font-bold">Guests Count</label>
             <select
               id="booking-guests"
-              class="w-full bg-black border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors"
+              class="w-full bg-[#050505] border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#c5a059] transition-colors"
             >
               <option value="1 Person">1 Guest</option>
               <option value="2 People" selected>2 Guests</option>
@@ -172,15 +172,15 @@ const experiences = [
             id="booking-notes"
             rows="3"
             placeholder="Tell us about your coffee preferences or dietary requirements..."
-            class="w-full bg-black border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-amber-400 transition-colors"
+            class="w-full bg-[#050505] border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#c5a059] transition-colors"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          class="w-full py-4 text-xs font-mono uppercase tracking-widest font-black text-black bg-amber-400 hover:bg-white transition-colors"
+          class="w-full py-4 text-xs font-mono uppercase tracking-widest font-bold text-black bg-[#c5a059] hover:bg-[#e6d7c3] transition-colors shadow-lg"
         >
-          Confirm Reservation via Concierge &rarr;
+          Confirm Reservation via WhatsApp Concierge &rarr;
         </button>
       </form>
     </div>
