@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import Awards from '../components/Awards.astro';
+import Menu from '../components/Menu.astro';
 import OriginStory from '../components/OriginStory.astro';
+import Awards from '../components/Awards.astro';
 import Timeline from '../components/Timeline.astro';
 import TastingBooking from '../components/TastingBooking.astro';
-import Menu from '../components/Menu.astro';
 import Gallery from '../components/Gallery.astro';
 import TourismGuide from '../components/TourismGuide.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
@@ -17,64 +17,82 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
 
   <main>
     <Hero />
-    <Awards />
+    <Menu />
     <OriginStory />
+    <Awards />
     <Timeline />
     <TastingBooking />
-    <Menu />
     <Gallery />
     <TourismGuide />
   </main>
 
-  <footer class="bg-[#0a0806] border-t border-[#d4af37]/20 py-16 text-xs text-gray-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div class="space-y-4">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full border border-[#d4af37] flex items-center justify-center text-[#d4af37] font-serif font-bold text-sm">CS</div>
-            <span class="font-serif text-lg text-white font-bold tracking-widest uppercase">Coffee Secret</span>
-          </div>
-          <p class="text-gray-400 font-light leading-relaxed">
-            A hidden specialty coffee sanctuary in the volcanic highlands of Turrialba, Costa Rica.
+  <!-- GoodBoyBob Style Global Footer -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-12 text-white font-mono text-xs">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16 pb-16 border-b border-white/10">
+
+        <!-- Brand Description -->
+        <div class="lg:col-span-2 pr-0 lg:pr-8">
+          <span class="font-sans font-black tracking-tighter text-3xl text-white uppercase block mb-4">
+            COFFEE SECRET<span class="text-amber-400 font-serif italic text-2xl font-normal">.cr</span>
+          </span>
+          <p class="text-gray-400 font-sans font-light text-sm leading-relaxed mb-6">
+            An elevated specialty coffee destination hidden in the volcanic cloud forests of Turrialba, Costa Rica. Sourced with devotion, roasted for clarity, delivered worldwide.
           </p>
+          <div class="text-amber-400 font-bold uppercase tracking-widest text-[11px]">
+            SCA Certified • Direct Trade Estate
+          </div>
         </div>
 
+        <!-- Explore Links -->
         <div>
-          <h4 class="font-serif text-sm text-white font-semibold mb-4 uppercase tracking-wider text-[#d4af37]">Navigation</h4>
-          <ul class="space-y-2">
-            <li><a href="#origin" class="hover:text-white transition-colors">Origin Story</a></li>
-            <li><a href="#awards" class="hover:text-white transition-colors">Awards & Recognitions</a></li>
-            <li><a href="#timeline" class="hover:text-white transition-colors">Seed to Cup Process</a></li>
-            <li><a href="#menu" class="hover:text-white transition-colors">Specialty Menu</a></li>
+          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4">Explore</h4>
+          <ul class="space-y-2.5 text-gray-300">
+            <li><a href="#menu" class="hover:text-amber-400 transition-colors">Shop Micro-Lots</a></li>
+            <li><a href="#origin" class="hover:text-amber-400 transition-colors">Our Mission</a></li>
+            <li><a href="#awards" class="hover:text-amber-400 transition-colors">Recognition</a></li>
+            <li><a href="#timeline" class="hover:text-amber-400 transition-colors">Seed to Cup</a></li>
+            <li><a href="#booking" class="hover:text-amber-400 transition-colors">Tasting Room</a></li>
           </ul>
         </div>
 
+        <!-- Locations -->
         <div>
-          <h4 class="font-serif text-sm text-white font-semibold mb-4 uppercase tracking-wider text-[#d4af37]">Experiences</h4>
-          <ul class="space-y-2">
-            <li><a href="#booking" class="hover:text-white transition-colors">Sensory Cupping Flight</a></li>
-            <li><a href="#booking" class="hover:text-white transition-colors">Pour-Over Masterclass</a></li>
-            <li><a href="#booking" class="hover:text-white transition-colors">Sunset Coffee Cocktails</a></li>
-            <li><a href="#tourism" class="hover:text-white transition-colors">Turrialba Destination Guide</a></li>
+          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4">Locations</h4>
+          <ul class="space-y-2.5 text-gray-300 font-sans text-xs">
+            <li class="font-bold font-mono text-white">Turrialba Estate:</li>
+            <li>KM 14 Volcán Turrialba Road</li>
+            <li class="font-bold font-mono text-white mt-3">San José Lounge:</li>
+            <li>Escazú Avenue, San José</li>
           </ul>
         </div>
 
+        <!-- Contact & Newsletter -->
         <div>
-          <h4 class="font-serif text-sm text-white font-semibold mb-4 uppercase tracking-wider text-[#d4af37]">Contact & Location</h4>
-          <p class="text-gray-300 mb-2">Santa Cruz, Volcán Turrialba, Cartago, Costa Rica</p>
-          <p class="text-gray-300 mb-2">WhatsApp Concierge: +506 8888 9999</p>
-          <p class="text-gray-300">Email: concierge@coffeesecretturrialba.cr</p>
+          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4">Contact</h4>
+          <p class="text-gray-300 mb-2">WhatsApp: +506 8888 9999</p>
+          <p class="text-gray-300 mb-4">concierge@coffeesecretturrialba.cr</p>
+          <a
+            href="#booking"
+            class="inline-block px-4 py-2 bg-white text-black font-mono text-[11px] uppercase font-bold tracking-widest hover:bg-amber-400 transition-colors"
+          >
+            Inquire Reserve
+          </a>
         </div>
+
       </div>
 
-      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
-        <p>© {new Date().getFullYear()} Coffee Secret Turrialba. All rights reserved.</p>
+      <!-- Footer Bottom -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-500 text-[11px]">
+        <p>© {new Date().getFullYear()} Coffee Secret Turrialba. Inspired by GoodBoyBob Coffee aesthetic.</p>
         <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-gray-400">Privacy Policy</a>
-          <a href="#" class="hover:text-gray-400">Terms of Experience</a>
-          <a href="#" class="hover:text-gray-400">SCA Certified Estate</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Costa Rica Origin</a>
         </div>
       </div>
+
     </div>
   </footer>
 

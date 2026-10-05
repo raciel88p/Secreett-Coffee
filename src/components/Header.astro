@@ -1,79 +1,68 @@
 ---
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5 transition-all duration-300" id="main-header">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20">
+<!-- Announcement Bar -->
+<div class="bg-black text-white text-[11px] font-mono tracking-widest uppercase py-2 px-4 border-b border-white/10 text-center flex justify-between items-center z-50 relative">
+  <span class="hidden sm:inline-block text-gray-400">Turrialba Volcanic Micro-lot Coffee</span>
+  <span class="mx-auto sm:mx-0 font-semibold tracking-wider text-amber-300">Complimentary Global Express Shipping on Tasting Reserve Bundles</span>
+  <a href="#menu" class="hidden md:inline-block text-white hover:text-amber-300 underline underline-offset-4 transition-colors">Shop Micro-Lots &rarr;</a>
+</div>
 
-      <!-- Logo -->
+<!-- Main Global Header -->
+<header class="sticky top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="main-header">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+
+      <!-- Brand Logo in GoodBoyBob Style -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-[#15120e] group-hover:border-[#d4af37] transition-colors">
-          <span class="text-[#d4af37] font-serif text-xl font-bold tracking-tighter">CS</span>
-        </div>
-        <div class="flex flex-col">
-          <span class="font-serif text-lg tracking-[0.2em] text-white uppercase group-hover:text-[#d4af37] transition-colors">
-            Coffee Secret
-          </span>
-          <span class="text-[10px] tracking-[0.3em] text-[#c5a059] uppercase font-light">
-            Turrialba • Costa Rica
-          </span>
-        </div>
+        <span class="font-sans font-black tracking-tighter text-2xl sm:text-3xl text-white uppercase group-hover:text-amber-400 transition-colors">
+          COFFEE SECRET<span class="text-amber-400 font-serif italic text-xl ml-1 font-normal">.cr</span>
+        </span>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-medium text-gray-300">
-        <a href="#origin" class="hover:text-[#d4af37] transition-colors py-2 relative group">
-          Origin Story
-          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-[0.2em] font-medium text-gray-300">
+        <a href="#menu" class="hover:text-amber-400 transition-colors py-2">
+          Shop Coffee
         </a>
-        <a href="#awards" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+        <a href="#origin" class="hover:text-amber-400 transition-colors py-2">
+          Our Mission
+        </a>
+        <a href="#awards" class="hover:text-amber-400 transition-colors py-2">
           Recognition
-          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#timeline" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+        <a href="#timeline" class="hover:text-amber-400 transition-colors py-2">
           Seed to Cup
-          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#menu" class="hover:text-[#d4af37] transition-colors py-2 relative group">
-          Menu
-          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        <a href="#tourism" class="hover:text-amber-400 transition-colors py-2">
+          Locations
         </a>
-        <a href="#gallery" class="hover:text-[#d4af37] transition-colors py-2 relative group">
-          Gallery
-          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#tourism" class="hover:text-[#d4af37] transition-colors py-2 relative group">
-          Destination
-          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        <a href="#gallery" class="hover:text-amber-400 transition-colors py-2">
+          Visuals
         </a>
       </nav>
 
-      <!-- CTA & Language -->
-      <div class="hidden lg:flex items-center gap-5">
-        <div class="flex items-center gap-2 text-xs tracking-widest text-gray-400 border-r border-white/10 pr-4">
-          <button class="text-[#d4af37] font-semibold">EN</button>
-          <span>/</span>
-          <button class="hover:text-white transition-colors">ES</button>
-        </div>
+      <!-- CTA Action Button -->
+      <div class="hidden lg:flex items-center gap-6">
         <a
           href="#booking"
-          class="px-5 py-2.5 text-xs tracking-[0.15em] uppercase font-semibold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] hover:brightness-110 rounded-sm transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]"
+          class="px-6 py-2.5 text-xs font-mono uppercase tracking-widest font-bold text-black bg-white hover:bg-amber-400 transition-all duration-200"
         >
-          Reserve Tasting
+          Book Experience
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-btn"
-        class="lg:hidden text-gray-300 hover:text-white focus:outline-none p-2"
+        class="lg:hidden text-white hover:text-amber-400 focus:outline-none p-2"
         aria-label="Toggle navigation menu"
       >
-        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
-        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
 
@@ -81,27 +70,22 @@
   </div>
 
   <!-- Mobile Navigation Overlay -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-[#0d0b09]/95 border-b border-[#d4af37]/20 px-6 py-8 space-y-6 animate-fadeIn">
-    <nav class="flex flex-col space-y-4 text-sm tracking-[0.2em] uppercase font-medium">
-      <a href="#origin" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Origin Story</a>
-      <a href="#awards" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Recognition</a>
-      <a href="#timeline" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Seed to Cup</a>
-      <a href="#menu" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Menu</a>
-      <a href="#gallery" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Gallery</a>
-      <a href="#tourism" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Destination</a>
+  <div id="mobile-menu" class="hidden lg:hidden bg-black border-b border-white/10 px-6 py-8 space-y-6">
+    <nav class="flex flex-col space-y-4 text-sm font-mono tracking-widest uppercase font-semibold text-gray-200">
+      <a href="#menu" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Shop Coffee</a>
+      <a href="#origin" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Our Mission</a>
+      <a href="#awards" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Recognition</a>
+      <a href="#timeline" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Seed to Cup</a>
+      <a href="#tourism" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Locations</a>
+      <a href="#gallery" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Visuals</a>
     </nav>
-    <div class="pt-4 border-t border-white/10 flex flex-col gap-4">
+    <div class="pt-4 flex flex-col gap-4">
       <a
         href="#booking"
-        class="mobile-nav-link text-center px-5 py-3 text-xs tracking-[0.2em] uppercase font-semibold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] rounded-sm"
+        class="mobile-nav-link text-center px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold text-black bg-white hover:bg-amber-400 transition-colors"
       >
-        Reserve Tasting
+        Book Experience
       </a>
-      <div class="flex justify-center items-center gap-4 text-xs text-gray-400 tracking-widest pt-2">
-        <span class="text-[#d4af37]">English</span>
-        <span>|</span>
-        <span class="text-gray-400">Español</span>
-      </div>
     </div>
   </div>
 </header>
