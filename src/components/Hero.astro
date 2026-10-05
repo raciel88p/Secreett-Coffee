@@ -1,7 +1,7 @@
 ---
 ---
 
-<section class="relative bg-black text-white overflow-hidden min-h-[90vh] lg:min-h-screen flex flex-col justify-between">
+<section class="relative bg-[#050505] text-white overflow-hidden min-h-[92vh] lg:min-h-screen flex flex-col justify-between">
 
   <!-- Background Video Overlay -->
   <div class="absolute inset-0 z-0">
@@ -11,46 +11,46 @@
       muted
       playsinline
       poster="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1920&auto=format&fit=crop"
-      class="w-full h-full object-cover filter brightness-[0.55] contrast-125"
+      class="w-full h-full object-cover filter brightness-[0.45] contrast-125"
     >
       <source src="https://assets.mixkit.co/videos/preview/mixkit-barista-pouring-coffee-into-a-cup-41009-large.mp4" type="video/mp4" />
       <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-beans-falling-41008-large.mp4" type="video/mp4" />
     </video>
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-[#050505]/70"></div>
   </div>
 
-  <!-- Hero Content Grid matching GoodBoyBob typography -->
-  <div class="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-8 w-full pt-28 sm:pt-36 pb-16 flex-1 flex flex-col justify-end">
+  <!-- Hero Content Grid -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-32 sm:pt-40 pb-16 flex-1 flex flex-col justify-end">
 
     <div class="max-w-4xl">
       <!-- Badge / Subtitle -->
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-amber-300 text-xs font-mono tracking-widest uppercase mb-6">
-        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-        Direct Harvest • Volcanic Micro-lot Costa Rica
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#050505]/80 backdrop-blur-md border border-[#c5a059]/30 text-[#c5a059] text-xs font-mono tracking-widest uppercase mb-6 rounded-sm">
+        <span class="w-2 h-2 rounded-full bg-[#c5a059] animate-pulse"></span>
+        Costa Rica • Turrialba Volcanic Micro-lot
       </div>
 
-      <!-- Main Headline in GoodBoyBob Style -->
+      <!-- Main Headline -->
       <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.92] mb-6 text-white">
-        THE BEST <br/>
-        <span class="font-serif italic font-normal text-amber-300">TURRIALBA</span> <br/>
-        COFFEE BREW.
+        COFFEE <br/>
+        <span class="font-serif italic font-normal text-[#c5a059] lowercase">secret</span> <br/>
+        TURRIALBA.
       </h1>
 
-      <p class="text-lg sm:text-2xl font-light text-gray-200 max-w-2xl mb-8 leading-relaxed font-sans">
-        Start your day with a hidden specialty coffee experience from the volcanic cloud forests of Costa Rica. Sourced with devotion, roasted for extraordinary clarity.
+      <p class="text-lg sm:text-2xl font-light text-gray-300 max-w-2xl mb-8 leading-relaxed font-sans">
+        A hidden specialty coffee destination tucked within the volcanic cloud forests of Costa Rica. Recognized for extraordinary single-origin micro-lots, anaerobic fermentations, and sensory cupping sessions.
       </p>
 
-      <!-- CTAs in GoodBoyBob high contrast block style -->
+      <!-- CTAs -->
       <div class="flex flex-wrap items-center gap-4">
         <a
           href="#menu"
-          class="px-8 py-4 bg-white text-black font-mono text-xs uppercase tracking-widest font-black hover:bg-amber-400 transition-all duration-200 shadow-lg"
+          class="px-8 py-4 bg-[#c5a059] text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#e6d7c3] transition-all duration-300 shadow-xl"
         >
-          Shop Micro-Lots
+          Explore Micro-Lots
         </a>
         <a
           href="#booking"
-          class="px-8 py-4 bg-transparent border-2 border-white text-white font-mono text-xs uppercase tracking-widest font-black hover:bg-white hover:text-black transition-all duration-200"
+          class="px-8 py-4 bg-transparent border border-[#c5a059]/50 text-[#e6d7c3] font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059]/10 hover:border-[#c5a059] transition-all duration-300 backdrop-blur-sm"
         >
           Book Tasting Room
         </a>
@@ -58,22 +58,22 @@
     </div>
 
     <!-- Bottom Highlights Ticker / Bar -->
-    <div class="mt-16 pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs uppercase text-gray-300 tracking-wider">
-      <div>
+    <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs uppercase text-gray-300 tracking-wider">
+      <div class="border-l-2 border-[#c5a059] pl-4">
         <span class="block text-gray-400 text-[10px]">Cupping Score</span>
-        <span class="text-amber-300 text-base font-bold">92.5+ Specialty</span>
+        <span class="text-[#c5a059] text-lg font-bold">92.5+ SCA</span>
       </div>
-      <div>
+      <div class="border-l-2 border-white/20 pl-4">
         <span class="block text-gray-400 text-[10px]">Altitude</span>
-        <span class="text-white text-base font-bold">1,650 Meters</span>
+        <span class="text-white text-lg font-bold">1,850 Meters</span>
       </div>
-      <div>
+      <div class="border-l-2 border-white/20 pl-4">
         <span class="block text-gray-400 text-[10px]">Terroir</span>
-        <span class="text-white text-base font-bold">Volcanic Soil</span>
+        <span class="text-white text-lg font-bold">Active Volcanic Ash</span>
       </div>
-      <div>
-        <span class="block text-gray-400 text-[10px]">Variety</span>
-        <span class="text-amber-300 text-base font-bold">Geisha & SL-28</span>
+      <div class="border-l-2 border-[#c5a059] pl-4">
+        <span class="block text-gray-400 text-[10px]">Varieties</span>
+        <span class="text-[#c5a059] text-lg font-bold">Geisha, Sidra & Bourbon</span>
       </div>
     </div>
 

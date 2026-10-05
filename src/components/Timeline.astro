@@ -3,76 +3,81 @@ const steps = [
   {
     step: "01",
     title: "High-Altitude Agroforestry",
-    location: "Turrialba Cloud Forest • 1,650m",
-    desc: "Shade-grown under native rainforest canopy, enriched by volcanic mineral deposits and organic compost.",
+    location: "Turrialba Cloud Forest • 1,850m",
+    desc: "Shade-grown under native rainforest canopy, enriched by active volcanic mineral deposits and organic leaf mulch.",
     image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop"
   },
   {
     step: "02",
-    title: "Selective Sugar-Brix Harvesting",
+    title: "Selective Brix Harvesting",
     location: "Triple-Pass Hand Picking",
-    desc: "Harvesters strictly select cherries exceeding 22° Brix sugar concentration for maximum sweetness.",
+    desc: "Master pickers strictly select cherries exceeding 22° Brix sugar concentration to ensure supreme sweetness.",
     image: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=800&auto=format&fit=crop"
   },
   {
     step: "03",
-    title: "Anaerobic Precision Fermentation",
-    location: "Temperature Controlled Tanks",
-    desc: "Sealed stainless steel tanks ferment whole cherries for 120 hours, developing distinct floral and fruit notes.",
+    title: "Anaerobic Fermentation",
+    location: "Temperature Controlled Stainless Tanks",
+    desc: "Sealed oxygen-free tanks ferment whole cherries for 120 hours, unlocking delicate jasmine and tropical acidity notes.",
     image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
   },
   {
     step: "04",
-    title: "Raised Sun Beds Drying",
-    location: "African Raised Solar Beds",
-    desc: "Slow sun-drying over 25 days with continuous turning guarantees uniform moisture equilibrium and longevity.",
+    title: "African Solar Bed Drying",
+    location: "Raised Micro-Lot Decks",
+    desc: "Slow sun-drying over 25 days with hourly manual turning guarantees uniform moisture stabilization and longevity.",
     image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?q=80&w=800&auto=format&fit=crop"
   },
   {
     step: "05",
-    title: "Micro-Batch Thermal Roasting",
-    location: "Custom Profile Extraction",
-    desc: "Roasted in small 2kg batches with real-time sensor curves to highlight intrinsic varietal attributes.",
+    title: "Thermal Micro-Batch Roasting",
+    location: "Small-Lot Custom Profiles",
+    desc: "Roasted in 2kg small lots with real-time sensory thermal curves to accentuate intrinsic varietal attributes.",
     image: "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=800&auto=format&fit=crop"
   }
 ];
 ---
 
-<section id="timeline" class="py-24 bg-[#0a0a0a] text-white border-t border-white/10">
-  <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
+<section id="timeline" class="py-24 bg-[#050505] text-white border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-    <!-- Section Header in GoodBoyBob Style -->
-    <div class="mb-16 pb-8 border-b border-white/10">
-      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-2">
-        Uncompromising Craftsmanship
-      </span>
-      <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
-        THE SEED-TO-CUP <span class="font-serif italic font-normal text-amber-300">PROCESS</span>
-      </h2>
+    <!-- Section Header -->
+    <div class="mb-16 pb-8 border-b border-white/10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
+          Uncompromising Craftsmanship
+        </span>
+        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
+          THE SEED-TO-CUP <span class="font-serif italic font-normal text-[#c5a059]">journey</span>
+        </h2>
+      </div>
+      <p class="text-gray-400 font-sans text-sm max-w-md">
+        Every harvest step is strictly monitored by our agronomic tea and certified Q-Graders.
+      </p>
     </div>
 
     <!-- Timeline Grid Steps -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {steps.map((st) => (
-        <div class="border border-white/10 bg-black p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-400/60 transition-colors">
+        <div class="border border-[#c5a059]/20 bg-[#0d0d0d] p-6 sm:p-8 flex flex-col justify-between group hover:border-[#c5a059] transition-all duration-300">
           <div>
             <div class="flex items-center justify-between mb-6">
-              <span class="text-4xl font-mono font-black text-amber-400">{st.step}</span>
-              <span class="text-[10px] font-mono uppercase tracking-widest text-gray-400 border border-white/10 px-2.5 py-1">
+              <span class="text-4xl font-mono font-bold text-[#c5a059]">{st.step}</span>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-gray-300 border border-[#c5a059]/30 px-2.5 py-1 bg-[#c5a059]/10">
                 {st.location}
               </span>
             </div>
 
-            <div class="aspect-video overflow-hidden mb-6 bg-white/5">
+            <div class="aspect-video overflow-hidden mb-6 bg-black border border-white/10">
               <img
                 src={st.image}
                 alt={st.title}
                 loading="lazy"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90 contrast-110"
               />
             </div>
 
-            <h3 class="text-2xl font-black uppercase tracking-tight mb-3">
+            <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-[#c5a059] transition-colors">
               {st.title}
             </h3>
             <p class="text-gray-300 text-sm font-light leading-relaxed font-sans">
@@ -80,8 +85,9 @@ const steps = [
             </p>
           </div>
 
-          <div class="pt-6 border-t border-white/10 mt-6 text-right">
-            <span class="text-[10px] font-mono text-amber-300 uppercase tracking-widest">Quality Standard Verified</span>
+          <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest">
+            <span class="text-[#c5a059]">Stage {st.step} Complete</span>
+            <span class="text-gray-500">Turrialba QC</span>
           </div>
         </div>
       ))}
