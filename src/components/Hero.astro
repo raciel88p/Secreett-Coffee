@@ -1,0 +1,91 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <!-- Video / Dark Visual Background -->
+  <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+    <!-- Video element with high quality fallback poster -->
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1920&auto=format&fit=crop"
+      class="w-full h-full object-cover scale-105 filter brightness-[0.4] contrast-125 transition-transform duration-1000"
+    >
+      <source src="https://cdn.coverr.co/videos/coverr-pouring-espresso-coffee-5197/1080p.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Gradient Overlay for Cinematic Luxury Look -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0d0b09] via-[#0d0b09]/50 to-[#0d0b09]/80"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#0d0b09_90%)]"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24 flex flex-col items-center">
+
+    <!-- Altitude Badge -->
+    <div class="hero-badge inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-[#15120e]/80 border border-[#d4af37]/30 backdrop-blur-md mb-8 animate-pulse">
+      <span class="w-2 h-2 rounded-full bg-[#d4af37]"></span>
+      <span class="text-xs uppercase tracking-[0.25em] text-[#f3e5ab] font-medium">
+        Turrialba Volcano • 1,450M Altitude • Single Estate Micro-Lot
+      </span>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="hero-title font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight leading-[1.15] mb-6">
+      A Hidden <span class="gold-gradient-text italic font-normal">Sanctuary</span> of Specialty Coffee
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle text-gray-300 text-base sm:text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-10">
+      Discreetly nestled in the misty cloud forests of Turrialba, Costa Rica. Experience award-winning volcanic micro-lots and private sensory tastings crafted for true connoisseurs.
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="hero-ctas flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+      <a
+        href="#booking"
+        class="w-full sm:w-auto px-8 py-4 text-xs tracking-[0.25em] uppercase font-bold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] hover:brightness-110 rounded-sm transition-all duration-300 shadow-[0_0_25px_rgba(212,175,55,0.3)] hover:scale-105 text-center"
+      >
+        Book Tasting Experience
+      </a>
+      <a
+        href="#origin"
+        class="w-full sm:w-auto px-8 py-4 text-xs tracking-[0.25em] uppercase font-semibold text-white bg-transparent border border-white/20 hover:border-[#d4af37] hover:text-[#d4af37] backdrop-blur-sm rounded-sm transition-all duration-300 text-center"
+      >
+        Discover Our Origin
+      </a>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="hero-stats grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12 mt-20 pt-12 border-t border-white/10 w-full max-w-4xl">
+      <div class="flex flex-col items-center">
+        <span class="font-serif text-3xl sm:text-4xl text-[#d4af37] font-bold">92+</span>
+        <span class="text-[11px] uppercase tracking-[0.2em] text-gray-400 mt-1">SCA Score</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="font-serif text-3xl sm:text-4xl text-[#d4af37] font-bold">1,450m</span>
+        <span class="text-[11px] uppercase tracking-[0.2em] text-gray-400 mt-1">Volcanic Altitude</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="font-serif text-3xl sm:text-4xl text-[#d4af37] font-bold">Top 3</span>
+        <span class="text-[11px] uppercase tracking-[0.2em] text-gray-400 mt-1">Cup of Excellence</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="font-serif text-3xl sm:text-4xl text-[#d4af37] font-bold">100%</span>
+        <span class="text-[11px] uppercase tracking-[0.2em] text-gray-400 mt-1">Anaerobic Handpicked</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-gray-400">
+    <span class="text-[10px] tracking-[0.3em] uppercase text-[#c5a059]">Scroll to explore</span>
+    <div class="w-5 h-9 rounded-full border border-[#d4af37]/40 flex items-start justify-center p-1">
+      <div class="w-1 h-2 bg-[#d4af37] rounded-full animate-bounce"></div>
+    </div>
+  </div>
+</section>

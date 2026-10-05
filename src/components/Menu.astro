@@ -1,0 +1,171 @@
+---
+const menuCategories = [
+  {
+    category: "Signature Volcanic Micro-Lots",
+    description: "Rare single-origin coffees roasted in-house in small 2kg batches.",
+    items: [
+      {
+        name: "Turrialba Geisha Anaerobic",
+        process: "120hr Double Anaerobic Fermentation",
+        notes: "Jasmine Blossom, Bergamot, Nectarine, Wild Honey",
+        elevation: "1,480m",
+        price: "$12"
+      },
+      {
+        name: "Red Bourbon Honey Process",
+        process: "Semi-Washed Black Honey",
+        notes: "Ripe Cherry, Dark Chocolate, Brown Sugar, Plum",
+        elevation: "1,420m",
+        price: "$9"
+      },
+      {
+        name: "Caturra Natural Macerated",
+        process: "Sun-Dried Natural Process",
+        notes: "Blueberry Jam, Cocoa Nibs, Syrupy Body",
+        elevation: "1,400m",
+        price: "$8"
+      }
+    ]
+  },
+  {
+    category: "Artisanal Extraction Methods",
+    description: "Precision extraction using mineral-balanced mountain spring water.",
+    items: [
+      {
+        name: "V60 Ceramic Pour-Over",
+        process: "Single-origin filter extraction",
+        notes: "High clarity, crisp acidity, complex floral bouquet",
+        elevation: "Custom Brew Ratio",
+        price: "$7"
+      },
+      {
+        name: "Chemex Slow Drip (For Two)",
+        process: "Triple-filtered clear extraction",
+        notes: "Exceptionally clean, smooth velvety finish",
+        elevation: "500ml Serve",
+        price: "$14"
+      },
+      {
+        name: "Japan Yama Cold Drip Towers",
+        process: "12-hour slow drop cold extraction",
+        notes: "Low acidity, dark chocolate liqueur undertones",
+        elevation: "Steeped Cold",
+        price: "$9"
+      }
+    ]
+  },
+  {
+    category: "Specialty Mixology & Cocktails",
+    description: "Crafted with aged Costa Rican rum, botanical spirits, and espresso.",
+    items: [
+      {
+        name: "Secret Volcanic Espresso Martini",
+        process: "Centenario Rum • Fresh Espresso • Cacao Liqueur",
+        notes: "Silky foam, dusted with 85% organic Turrialba dark cocoa",
+        elevation: "Signature",
+        price: "$16"
+      },
+      {
+        name: "Mist Forest Cascara Highball",
+        process: "Fermented Cascara Tea • Botanical Tonic • Lime",
+        notes: "Refreshing, crisp, notes of rosehip and dried fig",
+        elevation: "Refreshing",
+        price: "$13"
+      },
+      {
+        name: "Smoked Barrel Old Fashioned",
+        process: "Oak-Aged Rum • Cold Brew Concentrate • Bitters",
+        notes: "Infused with smoked coffee wood chips at the table",
+        elevation: "Smoked Live",
+        price: "$18"
+      }
+    ]
+  },
+  {
+    category: "Gourmet Pairings & Pastry",
+    description: "Prepared daily by our artisanal estate pastry chef.",
+    items: [
+      {
+        name: "Turrialba Cheese & Honey Danish",
+        process: "Local Aged Turrialba Cheese • Wild Meadow Honey",
+        notes: "Flaky butter croissant dough with savory-sweet balance",
+        elevation: "Baked Daily",
+        price: "$6"
+      },
+      {
+        name: "Volcanic Dark Chocolate Tart",
+        process: "85% Single Origin Turrialba Cacao • Sea Salt",
+        notes: "Rich, dense chocolate ganache with espresso drizzle",
+        elevation: "Artisanal",
+        price: "$8"
+      }
+    ]
+  }
+];
+---
+
+<section id="menu" class="py-24 bg-[#110e0b] relative border-t border-[#d4af37]/15">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-[#c5a059] font-medium block mb-3">
+        Refined Gastronomy
+      </span>
+      <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold tracking-tight mb-6">
+        The Specialty <span class="gold-gradient-text italic font-normal">Menu</span>
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+        Extracted with scientific precision, prepared with passion. Featuring rare micro-lots roasted in-house.
+      </p>
+    </div>
+
+    <!-- Menu Categories -->
+    <div class="space-y-16">
+      {menuCategories.map((cat) => (
+        <div>
+          <div class="border-b border-[#d4af37]/30 pb-4 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+            <div>
+              <h3 class="font-serif text-2xl text-[#f3e5ab] font-bold">{cat.category}</h3>
+              <p class="text-xs text-gray-400 mt-1">{cat.description}</p>
+            </div>
+            <span class="text-[10px] uppercase tracking-widest text-[#d4af37] font-semibold">Turrialba Estate</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cat.items.map((item) => (
+              <div class="glass-card p-6 rounded-sm hover:border-[#d4af37]/50 transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                  <div class="flex items-start justify-between gap-4 mb-2">
+                    <h4 class="font-serif text-lg text-white font-semibold group-hover:text-[#d4af37] transition-colors">
+                      {item.name}
+                    </h4>
+                    <span class="font-serif text-xl text-[#d4af37] font-bold shrink-0">{item.price}</span>
+                  </div>
+
+                  <p class="text-[11px] uppercase tracking-wider text-[#c5a059] font-medium mb-3">
+                    {item.process}
+                  </p>
+
+                  <p class="text-xs text-gray-300 font-light italic leading-relaxed mb-4">
+                    "{item.notes}"
+                  </p>
+                </div>
+
+                <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[10px] text-gray-400">
+                  <span>Terroir Spec</span>
+                  <span class="text-[#f3e5ab] font-mono">{item.elevation}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 text-center text-xs text-gray-400 italic">
+      * Micro-lot availability changes based on seasonal harvests. All pour-overs are brewed using purified rain-harvested water.
+    </div>
+
+  </div>
+</section>
