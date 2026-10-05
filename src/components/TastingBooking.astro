@@ -1,0 +1,221 @@
+---
+const experiences = [
+  {
+    id: "cupping",
+    title: "Sensory Cupping & Origin Discovery",
+    duration: "90 Minutes",
+    price: "$45 USD",
+    tag: "Most Popular",
+    description: "Guided cupping session led by an SCA certified Q-Grader. Evaluate 5 distinct micro-lots from Turrialba, learning aroma profiling, acid acidity notes, and post-harvest fermentation differences.",
+    includes: ["5 Single Origin Tastings", "Aroma Aroma Wheel Guide", "Artisanal Local Cheese Pairing"]
+  },
+  {
+    id: "masterclass",
+    title: "V60 & Espresso Barista Masterclass",
+    duration: "2 Hours",
+    price: "$75 USD",
+    tag: "Exclusive",
+    description: "Hands-on coffee extraction workshop using specialized water chemistry, precision grinder calibration, and pour-over geometry (V60, Chemex, Aeropress).",
+    includes: ["Hands-on Espresso Pulling", "Pour-Over Calibration", "Fresh 250g Bag of Geisha Beans"]
+  },
+  {
+    id: "sunset",
+    title: "Sunset Volcanic Coffee & Cocktail Pairing",
+    duration: "2.5 Hours",
+    price: "$95 USD",
+    tag: "VIP Luxury",
+    description: "An intimate evening experience overlooking Turrialba volcano. Enjoy signature espresso-infused cocktails paired with gourmet 4-course estate chocolate and tapas.",
+    includes: ["4 Signature Coffee Cocktails", "Gourmet Tapas Board", "Private Lounge Access"]
+  }
+];
+---
+
+<section id="booking" class="py-24 bg-[#0d0b09] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-[#c5a059] font-medium block mb-3">
+        By Reservation Only
+      </span>
+      <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold tracking-tight mb-6">
+        Exclusive Tasting <span class="gold-gradient-text italic font-normal">Experiences</span>
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+        Immersion into coffee perfection. To guarantee intimate service, reservations are strictly limited to small private groups.
+      </p>
+    </div>
+
+    <!-- Experience Cards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      {experiences.map((exp) => (
+        <div class="glass-card p-8 rounded-sm flex flex-col justify-between relative hover:border-[#d4af37]/60 transition-all duration-300 group">
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] uppercase tracking-widest font-bold text-[#d4af37] px-2.5 py-1 bg-[#d4af37]/10 rounded-sm border border-[#d4af37]/30">
+                {exp.tag}
+              </span>
+              <span class="text-xs text-gray-400">{exp.duration}</span>
+            </div>
+
+            <h3 class="font-serif text-2xl text-white font-semibold mb-3 group-hover:text-[#f3e5ab] transition-colors">
+              {exp.title}
+            </h3>
+
+            <div class="font-serif text-3xl text-[#d4af37] font-bold mb-6">
+              {exp.price} <span class="text-xs text-gray-400 font-sans font-normal">/ person</span>
+            </div>
+
+            <p class="text-gray-300 text-xs leading-relaxed mb-6 font-light">
+              {exp.description}
+            </p>
+
+            <div class="space-y-2 pt-4 border-t border-white/10 mb-8">
+              {exp.includes.map((inc) => (
+                <div class="flex items-center gap-2 text-xs text-gray-300">
+                  <span class="text-[#d4af37]">✓</span>
+                  <span>{inc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button
+            data-experience={exp.title}
+            class="booking-select-btn w-full py-3 text-xs uppercase tracking-[0.2em] font-semibold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] hover:brightness-110 rounded-sm transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)] text-center"
+          >
+            Select Experience
+          </button>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Interactive Reservation Form Modal/Box -->
+    <div class="max-w-3xl mx-auto glass-card p-8 sm:p-12 rounded-sm border border-[#d4af37]/30 shadow-2xl relative">
+      <div class="text-center mb-8">
+        <h3 class="font-serif text-2xl text-white font-bold mb-2">Request Your Reservation</h3>
+        <p class="text-xs text-gray-400">Direct instant confirmation via WhatsApp Concierge or direct booking email.</p>
+      </div>
+
+      <form id="tasting-form" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-[#c5a059] mb-2 font-medium">Full Name</label>
+            <input
+              type="text"
+              required
+              id="booking-name"
+              placeholder="e.g. Elena Rostova"
+              class="w-full bg-[#15120e] border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-[#c5a059] mb-2 font-medium">Selected Experience</label>
+            <select
+              id="booking-experience"
+              class="w-full bg-[#15120e] border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors"
+            >
+              {experiences.map((exp) => (
+                <option value={exp.title}>{exp.title}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-[#c5a059] mb-2 font-medium">Preferred Date</label>
+            <input
+              type="date"
+              required
+              id="booking-date"
+              class="w-full bg-[#15120e] border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-[#c5a059] mb-2 font-medium">Time Slot</label>
+            <select
+              id="booking-time"
+              class="w-full bg-[#15120e] border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors"
+            >
+              <option value="09:00 AM">09:00 AM (Morning Brew)</option>
+              <option value="11:30 AM">11:30 AM (Midday Flight)</option>
+              <option value="02:30 PM">02:30 PM (Afternoon Cupping)</option>
+              <option value="04:30 PM">04:30 PM (Sunset Experience)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-[#c5a059] mb-2 font-medium">Guests Count</label>
+            <select
+              id="booking-guests"
+              class="w-full bg-[#15120e] border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors"
+            >
+              <option value="1 Person">1 Guest</option>
+              <option value="2 People" selected>2 Guests</option>
+              <option value="4 People">4 Guests</option>
+              <option value="6 People">6 Guests (Private Group)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-[#c5a059] mb-2 font-medium">Special Notes or Dietary Preferences</label>
+          <textarea
+            id="booking-notes"
+            rows="3"
+            placeholder="Tell us about your coffee preferences or dietary requirements..."
+            class="w-full bg-[#15120e] border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-[#d4af37] transition-colors"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-4 text-xs uppercase tracking-[0.25em] font-bold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] hover:brightness-110 rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+        >
+          Request Reservation via Concierge
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const tastingForm = document.getElementById('tasting-form');
+  const expButtons = document.querySelectorAll('.booking-select-btn');
+  const expSelect = document.getElementById('booking-experience') as HTMLSelectElement;
+
+  if (expButtons && expSelect) {
+    expButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expName = btn.getAttribute('data-experience');
+        if (expName) {
+          expSelect.value = expName;
+          document.getElementById('tasting-form')?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+  if (tastingForm) {
+    tastingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (document.getElementById('booking-name') as HTMLInputElement)?.value;
+      const experience = (document.getElementById('booking-experience') as HTMLSelectElement)?.value;
+      const date = (document.getElementById('booking-date') as HTMLInputElement)?.value;
+      const time = (document.getElementById('booking-time') as HTMLSelectElement)?.value;
+      const guests = (document.getElementById('booking-guests') as HTMLSelectElement)?.value;
+      const notes = (document.getElementById('booking-notes') as HTMLTextAreaElement)?.value;
+
+      const message = `Hello Coffee Secret Turrialba! I would like to request a reservation:\n\n• Name: ${name}\n• Experience: ${experience}\n• Date: ${date}\n• Time: ${time}\n• Guests: ${guests}\n• Notes: ${notes || 'None'}`;
+
+      const whatsappUrl = `https://wa.me/50688889999?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  }
+</script>

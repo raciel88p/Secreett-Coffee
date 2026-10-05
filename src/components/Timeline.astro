@@ -1,0 +1,114 @@
+---
+const timelineSteps = [
+  {
+    step: "01",
+    title: "Volcanic Nurturing & Terroir",
+    subtitle: "Turrialba Slopes (1,450m)",
+    description: "Volcanic mineral deposits from active eruptions create nutrient-dense soil. Warm Caribbean breezes merge with mountain mists to allow slow cherry maturation over 9 months.",
+    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    step: "02",
+    title: "Micro-lot Hand Harvesting",
+    subtitle: "Peak Brix Sugar Selection",
+    description: "Experienced local pickers select only deep burgundy cherries at optimum sugar content (22-26° Brix). Every cherry passes rigorous manual quality sorting.",
+    image: "https://images.unsplash.com/photo-1524350876685-274059332603?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    step: "03",
+    title: "Anaerobic Precision Fermentation",
+    subtitle: "Controlled Micro-Oxygen Chambers",
+    description: "Sealed stainless steel tanks allow wild yeast strains from the Turrialba rainforest to ferment cherries under monitored temperature and pressure for 72 to 120 hours.",
+    image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    step: "04",
+    title: "Highland Sun Drying on Raised Beds",
+    subtitle: "African Style Drying Tables",
+    description: "Drying under gentle mountain sunshine on elevated mesh beds with continuous hourly manual turning until moisture reaches exact 10.5%.",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    step: "05",
+    title: "Master Roasting & Sensory Cupping",
+    subtitle: "Custom Profile Fire Roasting",
+    description: "Small-batch drum roasting tailored to highlight jasmine florals, red berries, and cacao nib notes, followed by SCA certified Q-Grader evaluation.",
+    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop"
+  }
+];
+---
+
+<section id="timeline" class="py-24 bg-[#110e0b] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="text-xs uppercase tracking-[0.3em] text-[#c5a059] font-medium block mb-3">
+        Artisanal Process
+      </span>
+      <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold tracking-tight mb-6">
+        The Journey From <span class="gold-gradient-text italic font-normal">Seed to Cup</span>
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+        Trace the deliberate, uncompromising steps that turn Turrialba volcanic soil into an extraordinary cup of coffee.
+      </p>
+    </div>
+
+    <!-- Timeline Wrapper -->
+    <div class="relative">
+      <!-- Central vertical line for desktop -->
+      <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-[#d4af37]/10 via-[#d4af37]/40 to-[#d4af37]/10 -translate-x-1/2"></div>
+
+      <div class="space-y-16 lg:space-y-24">
+        {timelineSteps.map((item, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <div class={`timeline-item flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${isEven ? '' : 'lg:flex-row-reverse'}`}>
+
+              <!-- Content Block -->
+              <div class="w-full lg:w-1/2 text-left">
+                <div class="glass-card p-8 rounded-sm hover:border-[#d4af37]/50 transition-all duration-300 relative group">
+
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="font-serif text-3xl sm:text-4xl text-[#d4af37] font-bold">{item.step}</span>
+                    <span class="text-xs uppercase tracking-[0.2em] font-medium text-[#c5a059] px-3 py-1 bg-[#d4af37]/10 rounded-full border border-[#d4af37]/30">
+                      {item.subtitle}
+                    </span>
+                  </div>
+
+                  <h3 class="font-serif text-2xl text-white font-semibold mb-3 group-hover:text-[#f3e5ab] transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p class="text-gray-300 text-xs sm:text-sm leading-relaxed font-light">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Center Marker Badge -->
+              <div class="hidden lg:flex shrink-0 w-12 h-12 rounded-full bg-[#15120e] border-2 border-[#d4af37] items-center justify-center text-[#d4af37] z-10 shadow-[0_0_15px_rgba(212,175,55,0.4)] font-bold text-sm">
+                ✦
+              </div>
+
+              <!-- Image Block -->
+              <div class="w-full lg:w-1/2">
+                <div class="relative rounded-sm overflow-hidden border border-[#d4af37]/20 shadow-xl group">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    class="w-full h-64 sm:h-72 object-cover filter brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0d0b09]/80 via-transparent to-transparent"></div>
+                </div>
+              </div>
+
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+  </div>
+</section>

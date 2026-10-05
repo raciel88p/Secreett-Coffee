@@ -1,0 +1,120 @@
+---
+const attractions = [
+  {
+    name: "Turrialba Volcano National Park",
+    distance: "15 mins from Estate",
+    description: "Explore active crater lookouts, geothermal cloud forest trails, and rare high-altitude flora.",
+    tag: "Volcano & Nature"
+  },
+  {
+    name: "Pacuare River Whitewater Rafting",
+    distance: "30 mins from Estate",
+    description: "World-famous Class IV-V rainforest rafting canyon surrounded by towering waterfalls.",
+    tag: "Adventure"
+  },
+  {
+    name: "Guayabo National Monument",
+    distance: "20 mins from Estate",
+    description: "Costa Rica's most significant ancient pre-Columbian archaeological stone city ruins.",
+    tag: "Heritage"
+  }
+];
+---
+
+<section id="tourism" class="py-24 bg-[#110e0b] relative border-t border-[#d4af37]/15">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs uppercase tracking-[0.3em] text-[#c5a059] font-medium block mb-3">
+        Discover Turrialba
+      </span>
+      <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold tracking-tight mb-6">
+        An Eco-Luxury <span class="gold-gradient-text italic font-normal">Destination</span>
+      </h2>
+      <p class="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
+        Beyond exceptional coffee, Turrialba is Costa Rica's premier destination for eco-luxury, adventure, and untouched natural beauty.
+      </p>
+    </div>
+
+    <!-- Map & Location Info Block -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+
+      <!-- Direct Info Card -->
+      <div class="glass-card p-8 rounded-sm lg:col-span-1 space-y-6">
+        <h3 class="font-serif text-2xl text-white font-bold">Visiting The Estate</h3>
+        <p class="text-xs text-gray-300 font-light leading-relaxed">
+          Coffee Secret is located in the Santa Cruz highland corridor of Turrialba, 2 hours from San José International Airport (SJO).
+        </p>
+
+        <div class="space-y-4 pt-4 border-t border-white/10 text-xs">
+          <div>
+            <span class="text-[#c5a059] font-semibold block uppercase tracking-wider">Address</span>
+            <span class="text-gray-200">Ruta Volcán Turrialba KM 14, Santa Cruz, Cartago, Costa Rica</span>
+          </div>
+
+          <div>
+            <span class="text-[#c5a059] font-semibold block uppercase tracking-wider">Visiting Hours</span>
+            <span class="text-gray-200">Tue – Sun: 8:00 AM – 6:00 PM (By Reservation)</span>
+          </div>
+
+          <div>
+            <span class="text-[#c5a059] font-semibold block uppercase tracking-wider">Concierge Phone / WhatsApp</span>
+            <span class="text-[#d4af37] font-semibold">+506 8888 9999</span>
+          </div>
+        </div>
+
+        <a
+          href="https://maps.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full text-center py-3 text-xs uppercase tracking-[0.2em] font-semibold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] rounded-sm hover:brightness-110 transition-all"
+        >
+          Open In Google Maps
+        </a>
+      </div>
+
+      <!-- Interactive Styled Map Box -->
+      <div class="lg:col-span-2 rounded-sm overflow-hidden border border-[#d4af37]/30 relative min-h-[320px] bg-[#15120e] flex items-center justify-center p-6 text-center">
+        <!-- Stylized Dark Map Graphic Background -->
+        <div class="absolute inset-0 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+
+        <div class="relative z-10 max-w-md">
+          <div class="w-16 h-16 rounded-full bg-[#d4af37]/20 border border-[#d4af37] flex items-center justify-center mx-auto mb-4 text-[#d4af37] text-2xl">
+            📍
+          </div>
+          <h4 class="font-serif text-2xl text-white font-bold mb-2">Turrialba Highlands Map</h4>
+          <p class="text-xs text-gray-300 font-light mb-6">
+            Situated at 1,450 meters elevation overlooking the Reventazón river valley and Turrialba volcanic peak. Helipad access available upon private request.
+          </p>
+          <div class="inline-flex gap-3 text-[11px] text-[#f3e5ab] font-mono bg-[#0d0b09]/80 px-4 py-2 rounded-full border border-[#d4af37]/30">
+            <span>Lat: 10.0247° N</span>
+            <span>•</span>
+            <span>Lng: -83.7656° W</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nearby Attractions Grid -->
+    <div>
+      <h3 class="font-serif text-2xl text-white font-bold mb-8 text-center sm:text-left">Nearby Luxury Experiences</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {attractions.map((att) => (
+          <div class="glass-card p-6 rounded-sm hover:border-[#d4af37]/50 transition-all duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] uppercase tracking-widest text-[#d4af37] font-semibold px-2 py-0.5 bg-[#d4af37]/10 rounded-xs border border-[#d4af37]/20">
+                {att.tag}
+              </span>
+              <span class="text-xs text-gray-400 font-mono">{att.distance}</span>
+            </div>
+            <h4 class="font-serif text-lg text-white font-semibold mb-2">{att.name}</h4>
+            <p class="text-xs text-gray-300 font-light leading-relaxed">{att.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

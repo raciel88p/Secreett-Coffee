@@ -1,0 +1,138 @@
+---
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5 transition-all duration-300" id="main-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-[#d4af37]/40 flex items-center justify-center bg-[#15120e] group-hover:border-[#d4af37] transition-colors">
+          <span class="text-[#d4af37] font-serif text-xl font-bold tracking-tighter">CS</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg tracking-[0.2em] text-white uppercase group-hover:text-[#d4af37] transition-colors">
+            Coffee Secret
+          </span>
+          <span class="text-[10px] tracking-[0.3em] text-[#c5a059] uppercase font-light">
+            Turrialba • Costa Rica
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-[0.2em] font-medium text-gray-300">
+        <a href="#origin" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+          Origin Story
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#awards" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+          Recognition
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#timeline" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+          Seed to Cup
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#menu" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+          Menu
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#gallery" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+          Gallery
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#tourism" class="hover:text-[#d4af37] transition-colors py-2 relative group">
+          Destination
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </nav>
+
+      <!-- CTA & Language -->
+      <div class="hidden lg:flex items-center gap-5">
+        <div class="flex items-center gap-2 text-xs tracking-widest text-gray-400 border-r border-white/10 pr-4">
+          <button class="text-[#d4af37] font-semibold">EN</button>
+          <span>/</span>
+          <button class="hover:text-white transition-colors">ES</button>
+        </div>
+        <a
+          href="#booking"
+          class="px-5 py-2.5 text-xs tracking-[0.15em] uppercase font-semibold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] hover:brightness-110 rounded-sm transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]"
+        >
+          Reserve Tasting
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden text-gray-300 hover:text-white focus:outline-none p-2"
+        aria-label="Toggle navigation menu"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[#0d0b09]/95 border-b border-[#d4af37]/20 px-6 py-8 space-y-6 animate-fadeIn">
+    <nav class="flex flex-col space-y-4 text-sm tracking-[0.2em] uppercase font-medium">
+      <a href="#origin" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Origin Story</a>
+      <a href="#awards" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Recognition</a>
+      <a href="#timeline" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Seed to Cup</a>
+      <a href="#menu" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Menu</a>
+      <a href="#gallery" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Gallery</a>
+      <a href="#tourism" class="mobile-nav-link text-gray-300 hover:text-[#d4af37] transition-colors py-1">Destination</a>
+    </nav>
+    <div class="pt-4 border-t border-white/10 flex flex-col gap-4">
+      <a
+        href="#booking"
+        class="mobile-nav-link text-center px-5 py-3 text-xs tracking-[0.2em] uppercase font-semibold text-[#0d0b09] bg-gradient-to-r from-[#f3e5ab] via-[#d4af37] to-[#b8860b] rounded-sm"
+      >
+        Reserve Tasting
+      </a>
+      <div class="flex justify-center items-center gap-4 text-xs text-gray-400 tracking-widest pt-2">
+        <span class="text-[#d4af37]">English</span>
+        <span>|</span>
+        <span class="text-gray-400">Español</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('menu-icon-open');
+  const closeIcon = document.getElementById('menu-icon-close');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (mobileMenuBtn && mobileMenu && openIcon && closeIcon) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        openIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  }
+</script>
