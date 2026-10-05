@@ -1,170 +1,166 @@
 ---
-const menuCategories = [
+const products = [
   {
-    category: "Signature Volcanic Micro-Lots",
-    description: "Rare single-origin coffees roasted in-house in small 2kg batches.",
-    items: [
-      {
-        name: "Turrialba Geisha Anaerobic",
-        process: "120hr Double Anaerobic Fermentation",
-        notes: "Jasmine Blossom, Bergamot, Nectarine, Wild Honey",
-        elevation: "1,480m",
-        price: "$12"
-      },
-      {
-        name: "Red Bourbon Honey Process",
-        process: "Semi-Washed Black Honey",
-        notes: "Ripe Cherry, Dark Chocolate, Brown Sugar, Plum",
-        elevation: "1,420m",
-        price: "$9"
-      },
-      {
-        name: "Caturra Natural Macerated",
-        process: "Sun-Dried Natural Process",
-        notes: "Blueberry Jam, Cocoa Nibs, Syrupy Body",
-        elevation: "1,400m",
-        price: "$8"
-      }
-    ]
+    name: "Turrialba Geisha Anaerobic",
+    subtitle: "Micro-Lot Reserve • SCA 92.5",
+    roast: "Light-Medium Roast",
+    process: "120hr Double Anaerobic Fermentation",
+    notes: ["Jasmine Blossom", "Bergamot", "Nectarine", "Wild Honey"],
+    elevation: "1,650m Volcanic Slope",
+    price: "$34.00",
+    image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=800&auto=format&fit=crop",
+    whatsappMsg: "Hello! I would like to order the Turrialba Geisha Anaerobic Micro-Lot coffee bag."
   },
   {
-    category: "Artisanal Extraction Methods",
-    description: "Precision extraction using mineral-balanced mountain spring water.",
-    items: [
-      {
-        name: "V60 Ceramic Pour-Over",
-        process: "Single-origin filter extraction",
-        notes: "High clarity, crisp acidity, complex floral bouquet",
-        elevation: "Custom Brew Ratio",
-        price: "$7"
-      },
-      {
-        name: "Chemex Slow Drip (For Two)",
-        process: "Triple-filtered clear extraction",
-        notes: "Exceptionally clean, smooth velvety finish",
-        elevation: "500ml Serve",
-        price: "$14"
-      },
-      {
-        name: "Japan Yama Cold Drip Towers",
-        process: "12-hour slow drop cold extraction",
-        notes: "Low acidity, dark chocolate liqueur undertones",
-        elevation: "Steeped Cold",
-        price: "$9"
-      }
-    ]
+    name: "Santa Cruz Red Bourbon",
+    subtitle: "Honey Process • SCA 89.5",
+    roast: "Medium Roast",
+    process: "Semi-Washed Black Honey",
+    notes: ["Ripe Cherry", "Dark Chocolate", "Brown Sugar", "Plum"],
+    elevation: "1,480m Volcanic Estate",
+    price: "$26.00",
+    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop",
+    whatsappMsg: "Hello! I would like to order the Santa Cruz Red Bourbon Honey Process coffee bag."
   },
   {
-    category: "Specialty Mixology & Cocktails",
-    description: "Crafted with aged Costa Rican rum, botanical spirits, and espresso.",
-    items: [
-      {
-        name: "Secret Volcanic Espresso Martini",
-        process: "Centenario Rum • Fresh Espresso • Cacao Liqueur",
-        notes: "Silky foam, dusted with 85% organic Turrialba dark cocoa",
-        elevation: "Signature",
-        price: "$16"
-      },
-      {
-        name: "Mist Forest Cascara Highball",
-        process: "Fermented Cascara Tea • Botanical Tonic • Lime",
-        notes: "Refreshing, crisp, notes of rosehip and dried fig",
-        elevation: "Refreshing",
-        price: "$13"
-      },
-      {
-        name: "Smoked Barrel Old Fashioned",
-        process: "Oak-Aged Rum • Cold Brew Concentrate • Bitters",
-        notes: "Infused with smoked coffee wood chips at the table",
-        elevation: "Smoked Live",
-        price: "$18"
-      }
-    ]
+    name: "Volcán Caturra Natural",
+    subtitle: "Macerated Harvest • SCA 88.0",
+    roast: "Omni Roast",
+    process: "Sun-Dried Natural Process",
+    notes: ["Blueberry Jam", "Cocoa Nibs", "Syrupy Body", "Vanilla"],
+    elevation: "1,420m High Canopy",
+    price: "$24.00",
+    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?q=80&w=800&auto=format&fit=crop",
+    whatsappMsg: "Hello! I would like to order the Volcán Caturra Natural Macerated coffee bag."
   },
   {
-    category: "Gourmet Pairings & Pastry",
-    description: "Prepared daily by our artisanal estate pastry chef.",
-    items: [
-      {
-        name: "Turrialba Cheese & Honey Danish",
-        process: "Local Aged Turrialba Cheese • Wild Meadow Honey",
-        notes: "Flaky butter croissant dough with savory-sweet balance",
-        elevation: "Baked Daily",
-        price: "$6"
-      },
-      {
-        name: "Volcanic Dark Chocolate Tart",
-        process: "85% Single Origin Turrialba Cacao • Sea Salt",
-        notes: "Rich, dense chocolate ganache with espresso drizzle",
-        elevation: "Artisanal",
-        price: "$8"
-      }
-    ]
+    name: "Highland SL-28 Micro-Lot",
+    subtitle: "Limited Edition • SCA 91.0",
+    roast: "Filter Roast",
+    process: "Washed Glacial Spring Water",
+    notes: ["Blackcurrant", "Citrus Zest", "Caramel", "Complex Acidity"],
+    elevation: "1,700m Cloud Forest",
+    price: "$38.00",
+    image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop",
+    whatsappMsg: "Hello! I would like to order the Highland SL-28 Micro-Lot coffee bag."
+  },
+  {
+    name: "V60 Artisan Pour-Over Tasting Kit",
+    subtitle: "Cupping Flights • 3x 100g Bags",
+    roast: "Tasting Flight",
+    process: "3 Distinct Processing Methods",
+    notes: ["Geisha Anaerobic", "Red Bourbon Honey", "Caturra Natural"],
+    elevation: "Estate Flight",
+    price: "$45.00",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
+    whatsappMsg: "Hello! I would like to order the V60 Artisan Pour-Over Tasting Kit."
+  },
+  {
+    name: "Cascara Volcanic Botanical Tea",
+    subtitle: "Superfood Cascara • Organic",
+    roast: "Dried Coffee Cherry",
+    process: "Sun-Cured Cherry Shells",
+    notes: ["Rosehip", "Dried Fig", "Hibiscus", "Honey Sweetness"],
+    elevation: "1,500m Sun Deck",
+    price: "$18.00",
+    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800&auto=format&fit=crop",
+    whatsappMsg: "Hello! I would like to order the Cascara Volcanic Botanical Tea bag."
   }
 ];
 ---
 
-<section id="menu" class="py-24 bg-[#110e0b] relative border-t border-[#d4af37]/15">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="menu" class="py-24 bg-black text-white border-t border-white/10">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
 
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span class="text-xs uppercase tracking-[0.3em] text-[#c5a059] font-medium block mb-3">
-        Refined Gastronomy
-      </span>
-      <h2 class="font-serif text-3xl sm:text-5xl text-white font-bold tracking-tight mb-6">
-        The Specialty <span class="gold-gradient-text italic font-normal">Menu</span>
-      </h2>
-      <p class="text-gray-400 text-sm sm:text-base font-light leading-relaxed">
-        Extracted with scientific precision, prepared with passion. Featuring rare micro-lots roasted in-house.
+    <!-- Section Header in GoodBoyBob Style -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/10 gap-6">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-2">
+          Direct From Santa Cruz, Turrialba
+        </span>
+        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
+          FEATURED <span class="font-serif italic font-normal text-amber-300">MICRO-LOTS</span>
+        </h2>
+      </div>
+      <p class="text-gray-400 font-sans text-sm sm:text-base max-w-md leading-relaxed">
+        Thoughtfully grown, hand-harvested, and roasted in small batches for extraordinary flavor clarity. Worldwide express delivery available.
       </p>
     </div>
 
-    <!-- Menu Categories -->
-    <div class="space-y-16">
-      {menuCategories.map((cat) => (
-        <div>
-          <div class="border-b border-[#d4af37]/30 pb-4 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-            <div>
-              <h3 class="font-serif text-2xl text-[#f3e5ab] font-bold">{cat.category}</h3>
-              <p class="text-xs text-gray-400 mt-1">{cat.description}</p>
+    <!-- Product Grid Cards in GoodBoyBob Style -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+      {products.map((item) => (
+        <div class="group bg-[#0a0a0a] border border-white/10 hover:border-amber-400/60 transition-all duration-300 flex flex-col justify-between overflow-hidden">
+
+          <!-- Image Wrapper with Zoom Effect -->
+          <div class="relative aspect-square overflow-hidden bg-black/50">
+            <img
+              src={item.image}
+              alt={item.name}
+              loading="lazy"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 filter contrast-105"
+            />
+            <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1 border border-white/20 text-[10px] font-mono tracking-widest uppercase text-amber-300">
+              {item.subtitle}
             </div>
-            <span class="text-[10px] uppercase tracking-widest text-[#d4af37] font-semibold">Turrialba Estate</span>
+            <div class="absolute bottom-4 right-4 bg-white text-black px-3 py-1 font-mono text-sm font-black">
+              {item.price}
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {cat.items.map((item) => (
-              <div class="glass-card p-6 rounded-sm hover:border-[#d4af37]/50 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                  <div class="flex items-start justify-between gap-4 mb-2">
-                    <h4 class="font-serif text-lg text-white font-semibold group-hover:text-[#d4af37] transition-colors">
-                      {item.name}
-                    </h4>
-                    <span class="font-serif text-xl text-[#d4af37] font-bold shrink-0">{item.price}</span>
-                  </div>
-
-                  <p class="text-[11px] uppercase tracking-wider text-[#c5a059] font-medium mb-3">
-                    {item.process}
-                  </p>
-
-                  <p class="text-xs text-gray-300 font-light italic leading-relaxed mb-4">
-                    "{item.notes}"
-                  </p>
-                </div>
-
-                <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[10px] text-gray-400">
-                  <span>Terroir Spec</span>
-                  <span class="text-[#f3e5ab] font-mono">{item.elevation}</span>
-                </div>
+          <!-- Content Details -->
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-gray-400 uppercase tracking-widest mb-2">
+                {item.process} • {item.elevation}
               </div>
-            ))}
+              <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-amber-300 transition-colors">
+                {item.name}
+              </h3>
+
+              <!-- Tasting Notes Pills -->
+              <div class="flex flex-wrap gap-1.5 my-4">
+                {item.notes.map((note) => (
+                  <span class="px-2.5 py-1 bg-white/5 border border-white/10 text-[11px] font-mono text-gray-300">
+                    {note}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-mono text-amber-400">{item.roast}</span>
+              <a
+                href={`https://wa.me/50688889999?text=${encodeURIComponent(item.whatsappMsg)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-2.5 bg-white text-black font-mono text-xs uppercase tracking-widest font-black hover:bg-amber-400 transition-all duration-200"
+              >
+                Order Bag &rarr;
+              </a>
+            </div>
+
           </div>
+
         </div>
       ))}
     </div>
 
-    <div class="mt-16 text-center text-xs text-gray-400 italic">
-      * Micro-lot availability changes based on seasonal harvests. All pour-overs are brewed using purified rain-harvested water.
+    <!-- Banner Note -->
+    <div class="mt-16 p-8 bg-white/5 border border-white/10 text-center flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-left">
+        <h4 class="text-xl font-black uppercase tracking-tight">Looking for Wholesale or Custom Roasts?</h4>
+        <p class="text-sm text-gray-400 font-light mt-1">We partner with specialty cafes, luxury resorts, and private collections globally.</p>
+      </div>
+      <a
+        href="https://wa.me/50688889999?text=Hello!%20I%20am%20interested%20in%20wholesale%20specialty%20coffee%20from%20Coffee%20Secret%20Turrialba."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 px-8 py-3 bg-amber-400 text-black font-mono text-xs uppercase tracking-widest font-black hover:bg-white transition-colors"
+      >
+        Inquire Wholesale
+      </a>
     </div>
 
   </div>
