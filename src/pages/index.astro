@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import InstagramStories from '../components/InstagramStories.astro';
 import Hero from '../components/Hero.astro';
 import Menu from '../components/Menu.astro';
 import OriginStory from '../components/OriginStory.astro';
@@ -10,10 +11,12 @@ import TastingBooking from '../components/TastingBooking.astro';
 import Gallery from '../components/Gallery.astro';
 import TourismGuide from '../components/TourismGuide.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
+import BottomNav from '../components/BottomNav.astro';
 ---
 
 <Layout>
   <Header />
+  <InstagramStories />
 
   <main>
     <Hero />
@@ -95,6 +98,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
   </footer>
 
   <WhatsAppButton />
+  <BottomNav />
 </Layout>
 
 <script>

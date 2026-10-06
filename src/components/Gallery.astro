@@ -4,50 +4,280 @@
 <section id="gallery" class="py-24 bg-stone-950 text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-    <div class="max-w-3xl mb-16">
+    <!-- Instagram Profile Header Style -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-16 pb-12 border-b border-stone-800">
+
+      <div class="flex items-center gap-6">
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[3px] bg-gradient-to-tr from-amber-600 via-yellow-400 to-amber-700 shadow-xl shadow-amber-950/50">
+          <img
+            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=300&auto=format&fit=crop"
+            alt="Coffee Secret Avatar"
+            class="w-full h-full object-cover rounded-full border-2 border-stone-950"
+          />
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-2xl sm:text-3xl font-sans font-black tracking-tight text-white">@coffeesecretturrialba</h3>
+            <span class="bg-amber-500 text-stone-950 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full uppercase">Oficial</span>
+          </div>
+          <p class="text-stone-400 font-mono text-xs mb-3">
+            Destino Secreto de Café de Especialidad • Volcán Turrialba 🌋 • 1,650m
+          </p>
+          <div class="flex items-center gap-6 text-xs font-mono text-stone-300">
+            <span><strong class="text-white">1,420</strong> publicaciones</span>
+            <span><strong class="text-white">38.5k</strong> seguidores</span>
+            <span><strong class="text-white">100%</strong> Micro-Lotes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 w-full md:w-auto">
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex-1 md:flex-none px-6 py-3 bg-stone-900 hover:bg-stone-800 border border-stone-700 text-white font-mono text-xs uppercase font-bold tracking-widest text-center rounded-xl transition-all"
+        >
+          SEGUIR EN INSTAGRAM
+        </a>
+        <a
+          href="#booking"
+          class="flex-1 md:flex-none px-6 py-3 bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono text-xs uppercase font-bold tracking-widest text-center rounded-xl transition-all shadow-lg shadow-amber-600/20"
+        >
+          MENSAGE CONCIERGE
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Gallery Section Title -->
+    <div class="max-w-3xl mb-12">
       <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-3" data-i18n="gallery_badge">
         GALERÍA VISUAL
       </span>
-      <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-6">
+      <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-4">
         <span data-i18n="gallery_title_1">EL ARTE DEL CAFÉ</span> <span class="font-serif italic font-normal text-amber-400" data-i18n="gallery_title_2">EN IMÁGENES.</span>
       </h2>
     </div>
 
-    <!-- Instagram Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="aspect-square bg-stone-900 overflow-hidden relative group">
+    <!-- Instagram Feed Grid (1:1 Aspect Ratio) -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+
+      <!-- Post 1: Harvest -->
+      <div
+        class="ig-post-card aspect-square bg-stone-900 overflow-hidden relative group cursor-pointer rounded-2xl border border-stone-800"
+        data-post-idx="0"
+      >
         <img
           src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800&auto=format&fit=crop"
-          alt="Coffee cherry harvest"
+          alt="Cosecha de cerezas Geisha"
           loading="lazy"
-          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-110"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110"
         />
+        <!-- Reel Badge -->
+        <div class="absolute top-3 right-3 bg-stone-950/70 backdrop-blur-md text-amber-400 text-xs px-2 py-1 rounded-md font-mono font-bold flex items-center gap-1">
+          🎬 REEL
+        </div>
+        <!-- Hover Overlay -->
+        <div class="absolute inset-0 bg-stone-950/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-4 text-center">
+          <div class="flex items-center gap-4 font-mono font-bold text-sm text-white">
+            <span>❤️ 1,842</span>
+            <span>💬 128</span>
+          </div>
+          <span class="text-xs font-mono text-amber-400 uppercase tracking-widest">Ver Publicación →</span>
+        </div>
       </div>
-      <div class="aspect-square bg-stone-900 overflow-hidden relative group">
+
+      <!-- Post 2: Pour over -->
+      <div
+        class="ig-post-card aspect-square bg-stone-900 overflow-hidden relative group cursor-pointer rounded-2xl border border-stone-800"
+        data-post-idx="1"
+      >
         <img
           src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
-          alt="Pour over coffee bar"
+          alt="Pour Over V60"
           loading="lazy"
-          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-110"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110"
         />
+        <div class="absolute top-3 right-3 bg-stone-950/70 backdrop-blur-md text-amber-400 text-xs px-2 py-1 rounded-md font-mono font-bold flex items-center gap-1">
+          📷 FOTO
+        </div>
+        <div class="absolute inset-0 bg-stone-950/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-4 text-center">
+          <div class="flex items-center gap-4 font-mono font-bold text-sm text-white">
+            <span>❤️ 2,105</span>
+            <span>💬 94</span>
+          </div>
+          <span class="text-xs font-mono text-amber-400 uppercase tracking-widest">Ver Publicación →</span>
+        </div>
       </div>
-      <div class="aspect-square bg-stone-900 overflow-hidden relative group">
+
+      <!-- Post 3: Volcano View -->
+      <div
+        class="ig-post-card aspect-square bg-stone-900 overflow-hidden relative group cursor-pointer rounded-2xl border border-stone-800"
+        data-post-idx="2"
+      >
         <img
           src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop"
-          alt="Roasting beans"
+          alt="Vista al Volcán Turrialba"
           loading="lazy"
-          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-110"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110"
         />
+        <div class="absolute top-3 right-3 bg-stone-950/70 backdrop-blur-md text-amber-400 text-xs px-2 py-1 rounded-md font-mono font-bold flex items-center gap-1">
+          🎬 REEL
+        </div>
+        <div class="absolute inset-0 bg-stone-950/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-4 text-center">
+          <div class="flex items-center gap-4 font-mono font-bold text-sm text-white">
+            <span>❤️ 3,420</span>
+            <span>💬 210</span>
+          </div>
+          <span class="text-xs font-mono text-amber-400 uppercase tracking-widest">Ver Publicación →</span>
+        </div>
       </div>
-      <div class="aspect-square bg-stone-900 overflow-hidden relative group">
+
+      <!-- Post 4: Cupping Session -->
+      <div
+        class="ig-post-card aspect-square bg-stone-900 overflow-hidden relative group cursor-pointer rounded-2xl border border-stone-800"
+        data-post-idx="3"
+      >
         <img
           src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop"
-          alt="Espresso extraction"
+          alt="Cata Profesional de Especialidad"
           loading="lazy"
-          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter contrast-110"
+          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter contrast-110"
         />
+        <div class="absolute top-3 right-3 bg-stone-950/70 backdrop-blur-md text-amber-400 text-xs px-2 py-1 rounded-md font-mono font-bold flex items-center gap-1">
+          📷 FOTO
+        </div>
+        <div class="absolute inset-0 bg-stone-950/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-3 p-4 text-center">
+          <div class="flex items-center gap-4 font-mono font-bold text-sm text-white">
+            <span>❤️ 1,980</span>
+            <span>💬 85</span>
+          </div>
+          <span class="text-xs font-mono text-amber-400 uppercase tracking-widest">Ver Publicación →</span>
+        </div>
       </div>
+
     </div>
 
   </div>
 </section>
+
+<!-- Instagram Post Modal / Lightbox -->
+<div
+  id="ig-post-modal"
+  class="fixed inset-0 z-50 bg-stone-950/95 backdrop-blur-xl hidden flex items-center justify-center p-4"
+>
+  <div class="relative w-full max-w-4xl bg-stone-900 rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl border border-stone-800 max-h-[90vh]">
+
+    <!-- Close button -->
+    <button id="close-ig-modal" class="absolute top-4 right-4 z-30 w-10 h-10 rounded-full bg-stone-950/80 text-white text-xl flex items-center justify-center hover:bg-amber-600 transition-colors">
+      ✕
+    </button>
+
+    <!-- Post Image View -->
+    <div class="w-full md:w-3/5 bg-black flex items-center justify-center aspect-square md:aspect-auto">
+      <img id="ig-modal-img" src="" alt="Instagram Post Detail" class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Post Content Panel -->
+    <div class="w-full md:w-2/5 p-6 flex flex-col justify-between bg-stone-900 border-t md:border-t-0 md:border-l border-stone-800">
+      <div>
+        <div class="flex items-center gap-3 mb-4 pb-4 border-b border-stone-800">
+          <div class="w-10 h-10 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 to-yellow-400">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=150&auto=format&fit=crop" class="w-full h-full object-cover rounded-full" alt="Avatar" />
+          </div>
+          <div>
+            <span class="font-sans font-bold text-sm text-white block">coffeesecretturrialba</span>
+            <span id="ig-modal-location" class="font-mono text-xs text-amber-400 block">Volcán Turrialba, Costa Rica</span>
+          </div>
+        </div>
+
+        <!-- Caption -->
+        <p id="ig-modal-caption" class="text-sm font-light text-stone-200 leading-relaxed font-sans mb-4"></p>
+        <span id="ig-modal-hashtags" class="text-xs font-mono text-amber-400 block mb-6"></span>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="pt-4 border-t border-stone-800">
+        <div class="flex items-center justify-between text-xs font-mono text-stone-400 mb-4">
+          <span id="ig-modal-likes">❤️ 1,842 Me gusta</span>
+          <span>Hace 2 días</span>
+        </div>
+        <a
+          href="#booking"
+          id="ig-modal-cta"
+          class="block w-full py-3 bg-amber-600 hover:bg-amber-500 text-stone-950 font-mono font-bold text-xs uppercase tracking-widest text-center rounded-xl transition-all shadow-lg shadow-amber-600/20"
+        >
+          CONSULTAR DISPONIBILIDAD VÍA WHATSAPP →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const postsData = [
+    {
+      img: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1000&auto=format&fit=crop",
+      caption: "Cosecha selectiva grano a grano de nuestro micro-lote Geisha Anaeróbico a 1,650m de elevación. La concentración de azúcares naturales alcanza su punto máximo durante esta temporada.",
+      hashtags: "#CoffeeSecret #GeishaMicroLot #Turrialba #SpecialtyCoffee #CostaRicaCoffee",
+      location: "Finca Volcánica Turrialba",
+      likes: "❤️ 1,842 Me gusta"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1000&auto=format&fit=crop",
+      caption: "Extracción lenta en V60. Resaltando notas vibrantes a flor de jazmín, miel silvestre y melocotón blanco de nuestro Red Bourbon Honey.",
+      hashtags: "#PourOver #V60Bar #CoffeeCraft #TerroirExperience",
+      location: "Brew Bar Terraza",
+      likes: "❤️ 2,105 Me gusta"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1000&auto=format&fit=crop",
+      caption: "Amanecer sobre el bosque nuboso del Volcán Turrialba. Las mañanas frías y la brisa atlántica moldean la acidez brillante de nuestros granos.",
+      hashtags: "#VolcanoTerroir #CloudForest #TurrialbaCostaRica",
+      location: "Volcán Turrialba 1,650m",
+      likes: "❤️ 3,420 Me gusta"
+    },
+    {
+      img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop",
+      caption: "Sesión privada de cata sensorial guiada por nuestro Q-Grader. Una inmersión completa en los perfiles de taza galardonados de Turrialba.",
+      hashtags: "#CuppingTasting #QGrader #CoffeeExperience #LuxuryCoffee",
+      location: "Sala de Cata Privada",
+      likes: "❤️ 1,980 Me gusta"
+    }
+  ];
+
+  const igModal = document.getElementById('ig-post-modal');
+  const igImg = document.getElementById('ig-modal-img') as HTMLImageElement;
+  const igCaption = document.getElementById('ig-modal-caption');
+  const igHashtags = document.getElementById('ig-modal-hashtags');
+  const igLocation = document.getElementById('ig-modal-location');
+  const igLikes = document.getElementById('ig-modal-likes');
+  const closeIgBtn = document.getElementById('close-ig-modal');
+  const igCta = document.getElementById('ig-modal-cta');
+
+  document.querySelectorAll('.ig-post-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      const idx = parseInt(card.getAttribute('data-post-idx') || '0', 10);
+      const post = postsData[idx];
+
+      if (igImg) igImg.src = post.img;
+      if (igCaption) igCaption.textContent = post.caption;
+      if (igHashtags) igHashtags.textContent = post.hashtags;
+      if (igLocation) igLocation.textContent = post.location;
+      if (igLikes) igLikes.textContent = post.likes;
+
+      igModal?.classList.remove('hidden');
+    });
+  });
+
+  closeIgBtn?.addEventListener('click', () => {
+    igModal?.classList.add('hidden');
+  });
+
+  igCta?.addEventListener('click', () => {
+    igModal?.classList.add('hidden');
+  });
+</script>
