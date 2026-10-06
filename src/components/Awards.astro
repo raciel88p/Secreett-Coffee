@@ -1,68 +1,80 @@
 ---
-const accolades = [
-  {
-    score: "92.5 SCA",
-    award: "Cup of Excellence Costa Rica",
-    category: "Micro-Lot Winner",
-    description: "Highest scoring anaerobic Geisha micro-lot in Turrialba regional history."
-  },
-  {
-    score: "Top 1%",
-    award: "Specialty Coffee Expo 2024",
-    category: "World Filter Roast",
-    description: "Best Single-Origin Filter Roast awarded by an international Q-Grader panel."
-  },
-  {
-    score: "Certified",
-    award: "Global Roasters Guild",
-    category: "Volcanic Agroforestry",
-    description: "Recognized for sustainable high-altitude soil stewardship & transparent direct trade."
-  }
-];
 ---
 
-<section id="awards" class="py-24 bg-[#050505] text-white border-t border-white/10">
+<section id="awards" class="py-24 bg-stone-950 text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
     <!-- Centered Header -->
     <div class="text-center max-w-4xl mx-auto mb-16">
-      <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-3">
-        Recognized Quality & National Pride
+      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-3" data-i18n="awards_badge">
+        DISTINCIONES Y PREMIOS NACIONALES
       </span>
       <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-6">
-        AWARD-WINNING <span class="font-serif italic font-normal text-[#c5a059]">accolades</span>
+        <span data-i18n="awards_title_1">RECONOCIMIENTO</span> <span class="font-serif italic font-normal text-amber-400" data-i18n="awards_title_2">MUNDIAL Y DE EXCELENCIA.</span>
       </h2>
-      <p class="text-gray-300 font-sans text-base sm:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-        Validated by international Q-Graders, world barista champions, and specialty coffee critics across the globe.
+      <p class="text-stone-300 font-sans text-base sm:text-lg font-light leading-relaxed max-w-2xl mx-auto" data-i18n="awards_desc">
+        Nuestros micro-lotes son elaborados en las laderas minerales del Volcán Turrialba, cosechados a mano en su punto óptimo de madurez y perfeccionados a través de procesos de fermentación anaeróbica galardonados.
       </p>
     </div>
 
     <!-- Awards Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {accolades.map((acc) => (
-        <div class="bg-[#0d0d0d] border border-[#c5a059]/20 p-8 sm:p-10 flex flex-col justify-between hover:border-[#c5a059] transition-all duration-300 group">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-3xl sm:text-4xl font-mono font-bold text-[#c5a059]">
-                {acc.score}
-              </span>
-              <span class="px-2.5 py-1 bg-[#c5a059]/10 border border-[#c5a059]/30 text-[#e6d7c3] text-[10px] font-mono uppercase tracking-wider">
-                {acc.category}
-              </span>
-            </div>
-            <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-[#c5a059] transition-colors">
-              {acc.award}
-            </h3>
-            <p class="text-gray-400 text-sm font-light leading-relaxed font-sans">
-              "{acc.description}"
-            </p>
+      <div class="bg-stone-900 border border-amber-500/20 p-8 sm:p-10 flex flex-col justify-between hover:border-amber-400 transition-all duration-300 group">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl sm:text-4xl font-mono font-bold text-amber-400">92.5 SCA</span>
+            <span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-mono uppercase tracking-wider">CUP OF EXCELLENCE</span>
           </div>
-          <div class="pt-6 border-t border-white/10 mt-8 font-mono text-[11px] text-gray-500 uppercase tracking-widest flex items-center justify-between">
-            <span>Verified Micro-Lot</span>
-            <span class="text-[#c5a059]">★ ★ ★ ★ ★</span>
-          </div>
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-amber-400 transition-colors" data-i18n="award1_title">
+            CUP OF EXCELLENCE
+          </h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="award1_desc">
+            Premio Nacional de Costa Rica por Micro-Lote Geisha Anaeróbico de Alta Elevación.
+          </p>
         </div>
-      ))}
+        <div class="pt-6 border-t border-white/10 mt-8 font-mono text-[11px] text-stone-500 uppercase tracking-widest flex items-center justify-between">
+          <span>MICRO-LOTE VERIFICADO</span>
+          <span class="text-amber-400">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+
+      <div class="bg-stone-900 border border-amber-500/20 p-8 sm:p-10 flex flex-col justify-between hover:border-amber-400 transition-all duration-300 group">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl sm:text-4xl font-mono font-bold text-amber-400">TOP 1%</span>
+            <span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-mono uppercase tracking-wider">VOLCANIC TERROIR</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-amber-400 transition-colors" data-i18n="award2_title">
+            MEJOR MICRO-LOTE VOLCÁNICO
+          </h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="award2_desc">
+            Reconocimiento por perfiles de taza excepcionales con notas de jazmín y miel silvestre.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-white/10 mt-8 font-mono text-[11px] text-stone-500 uppercase tracking-widest flex items-center justify-between">
+          <span>MICRO-LOTE VERIFICADO</span>
+          <span class="text-amber-400">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+
+      <div class="bg-stone-900 border border-amber-500/20 p-8 sm:p-10 flex flex-col justify-between hover:border-amber-400 transition-all duration-300 group">
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-3xl sm:text-4xl font-mono font-bold text-amber-400">PRIMER LUGAR</span>
+            <span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] font-mono uppercase tracking-wider">INNOVACIÓN</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-amber-400 transition-colors" data-i18n="award3_title">
+            CATA NACIONAL DE ESPECIALIDAD
+          </h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="award3_desc">
+            Primer lugar en la categoría de Innovación en Fermentación Controlada.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-white/10 mt-8 font-mono text-[11px] text-stone-500 uppercase tracking-widest flex items-center justify-between">
+          <span>MICRO-LOTE VERIFICADO</span>
+          <span class="text-amber-400">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
     </div>
 
   </div>

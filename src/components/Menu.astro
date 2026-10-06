@@ -1,166 +1,110 @@
 ---
-const products = [
-  {
-    name: "Turrialba Geisha Anaerobic",
-    subtitle: "Micro-Lot Reserve • SCA 92.5",
-    roast: "Light-Medium Roast",
-    process: "120hr Double Anaerobic",
-    notes: ["Jasmine Blossom", "Bergamot", "Nectarine", "Wild Honey"],
-    elevation: "1,850m Volcanic Slope",
-    price: "$34.00",
-    image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=800&auto=format&fit=crop",
-    whatsappMsg: "Hello! I would like to order the Turrialba Geisha Anaerobic Micro-Lot coffee bag."
-  },
-  {
-    name: "Santa Cruz Red Bourbon",
-    subtitle: "Honey Process • SCA 89.5",
-    roast: "Medium Roast",
-    process: "Black Honey Process",
-    notes: ["Ripe Cherry", "Dark Chocolate", "Brown Sugar", "Plum"],
-    elevation: "1,680m Volcanic Estate",
-    price: "$26.00",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop",
-    whatsappMsg: "Hello! I would like to order the Santa Cruz Red Bourbon Honey Process coffee bag."
-  },
-  {
-    name: "Volcán Caturra Natural",
-    subtitle: "Macerated Harvest • SCA 88.0",
-    roast: "Omni Roast",
-    process: "Sun-Dried Natural Process",
-    notes: ["Blueberry Jam", "Cocoa Nibs", "Syrupy Body", "Vanilla"],
-    elevation: "1,620m High Canopy",
-    price: "$24.00",
-    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?q=80&w=800&auto=format&fit=crop",
-    whatsappMsg: "Hello! I would like to order the Volcán Caturra Natural Macerated coffee bag."
-  },
-  {
-    name: "Highland Sidra Micro-Lot",
-    subtitle: "Limited Edition • SCA 91.5",
-    roast: "Filter Roast",
-    process: "Glacial Spring Water Washed",
-    notes: ["Blackcurrant", "Citrus Zest", "Caramel", "Complex Acidity"],
-    elevation: "1,820m Cloud Forest",
-    price: "$38.00",
-    image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop",
-    whatsappMsg: "Hello! I would like to order the Highland Sidra Micro-Lot coffee bag."
-  },
-  {
-    name: "V60 Artisan Cupping Kit",
-    subtitle: "Flight • 3x 100g Bags",
-    roast: "Tasting Flight",
-    process: "3 Distinct Processing Methods",
-    notes: ["Geisha Anaerobic", "Red Bourbon Honey", "Caturra Natural"],
-    elevation: "Estate Selection Flight",
-    price: "$45.00",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop",
-    whatsappMsg: "Hello! I would like to order the V60 Artisan Cupping Flight Kit."
-  },
-  {
-    name: "Cascara Volcanic Botanical Tea",
-    subtitle: "Superfood Cascara • Organic",
-    roast: "Dried Coffee Cherry",
-    process: "Sun-Cured Cherry Shells",
-    notes: ["Rosehip", "Dried Fig", "Hibiscus", "Natural Honey"],
-    elevation: "1,600m Solar Deck",
-    price: "$18.00",
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800&auto=format&fit=crop",
-    whatsappMsg: "Hello! I would like to order the Cascara Volcanic Botanical Tea bag."
-  }
-];
 ---
 
-<section id="menu" class="py-24 bg-[#050505] text-white border-t border-white/10">
+<section id="menu" class="py-24 bg-stone-950 text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
     <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/10 gap-6">
-      <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
-          Direct From Santa Cruz, Turrialba
-        </span>
-        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
-          FEATURED <span class="font-serif italic font-normal text-[#c5a059]">micro-lots</span>
-        </h2>
-      </div>
-      <p class="text-gray-300 font-sans text-sm sm:text-base max-w-md leading-relaxed">
-        Grown at high elevation, selectively harvested, and micro-batch roasted for extreme clarity. Worldwide express shipping available.
-      </p>
+    <div class="max-w-3xl mb-16">
+      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-3" data-i18n="menu_badge">
+        MENÚ EXCLUSIVO DE MICRO-LOTES
+      </span>
+      <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-6">
+        <span data-i18n="menu_title_1">NUESTRA SELECCIÓN</span> <span class="font-serif italic font-normal text-amber-400" data-i18n="menu_title_2">DE CAFÉS DE ESPECIALIDAD.</span>
+      </h2>
     </div>
 
-    <!-- Product Grid Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {products.map((item) => (
-        <div class="group bg-[#0d0d0d] border border-[#c5a059]/20 hover:border-[#c5a059] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+    <!-- Menu Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          <!-- Image Wrapper -->
-          <div class="relative aspect-square overflow-hidden bg-black">
-            <img
-              src={item.image}
-              alt={item.name}
-              loading="lazy"
-              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 filter contrast-110 brightness-90"
-            />
-            <div class="absolute top-4 left-4 bg-[#050505]/90 backdrop-blur-md px-3 py-1 border border-[#c5a059]/40 text-[10px] font-mono tracking-widest uppercase text-[#c5a059]">
-              {item.subtitle}
-            </div>
-            <div class="absolute bottom-4 right-4 bg-[#c5a059] text-black px-3 py-1 font-mono text-sm font-bold shadow-lg">
-              {item.price}
-            </div>
+      <!-- Item 1 -->
+      <div class="bg-stone-900 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-500/10 text-amber-300 font-mono text-[10px] tracking-widest uppercase border border-amber-500/30" data-i18n="menu_tag_geisha">
+              GEISHA • ANAERÓBICO
+            </span>
+            <span class="font-mono text-xl font-bold text-amber-400">$38 USD</span>
           </div>
-
-          <!-- Content Details -->
-          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
-            <div>
-              <div class="text-[11px] font-mono text-gray-400 uppercase tracking-widest mb-2">
-                {item.process} • {item.elevation}
-              </div>
-              <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-[#c5a059] transition-colors">
-                {item.name}
-              </h3>
-
-              <!-- Tasting Notes Pills -->
-              <div class="flex flex-wrap gap-1.5 my-4">
-                {item.notes.map((note) => (
-                  <span class="px-2.5 py-1 bg-white/5 border border-white/10 text-[11px] font-mono text-gray-300">
-                    {note}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <!-- Action Button -->
-            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
-              <span class="text-xs font-mono text-[#c5a059]">{item.roast}</span>
-              <a
-                href={`https://wa.me/50688889999?text=${encodeURIComponent(item.whatsappMsg)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="px-5 py-2.5 bg-[#c5a059] text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#e6d7c3] transition-all duration-200"
-              >
-                Reserve Bag &rarr;
-              </a>
-            </div>
-
-          </div>
-
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="menu_item1_title">
+            Geisha Volcánico Anaeróbico
+          </h3>
+          <p class="text-stone-300 text-sm font-sans font-light leading-relaxed mb-6" data-i18n="menu_item1_desc">
+            Perfil ultra elegante con notas intensas a jazmín, bergamota, melocotón blanco y un final prolongado a miel de azahar.
+          </p>
         </div>
-      ))}
-    </div>
-
-    <!-- Banner Wholesale Note -->
-    <div class="mt-16 p-8 bg-[#0d0d0d] border border-[#c5a059]/30 text-center flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="text-left">
-        <h4 class="text-xl font-black uppercase tracking-tight">Looking for Wholesale or Custom Roasts?</h4>
-        <p class="text-sm text-gray-400 font-light mt-1">We partner with luxury cafes, boutique hotels, and private coffee cellars globally.</p>
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center font-mono text-xs text-stone-400">
+          <span>Altitud: 1,650m</span>
+          <span>SCA: 92.5</span>
+        </div>
       </div>
-      <a
-        href="https://wa.me/50688889999?text=Hello!%20I%20am%20interested%20in%20wholesale%20specialty%20coffee%20from%20Coffee%20Secret%20Turrialba."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="shrink-0 px-8 py-3 bg-[#c5a059] text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#e6d7c3] transition-colors"
-      >
-        Inquire Wholesale
-      </a>
+
+      <!-- Item 2 -->
+      <div class="bg-stone-900 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-500/10 text-amber-300 font-mono text-[10px] tracking-widest uppercase border border-amber-500/30" data-i18n="menu_tag_bourbon">
+              RED BOURBON • HONEY
+            </span>
+            <span class="font-mono text-xl font-bold text-amber-400">$28 USD</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="menu_item2_title">
+            Red Bourbon Honey Silvestre
+          </h3>
+          <p class="text-stone-300 text-sm font-sans font-light leading-relaxed mb-6" data-i18n="menu_item2_desc">
+            Cuerpo sedoso con dulzura compleja de caña de azúcar, cereza madura, acidez málica y notas de chocolate negro.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center font-mono text-xs text-stone-400">
+          <span>Altitud: 1,600m</span>
+          <span>SCA: 89.0</span>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-stone-900 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-500/10 text-amber-300 font-mono text-[10px] tracking-widest uppercase border border-amber-500/30" data-i18n="menu_tag_catuai">
+              YELLOW CATUAI • LAVADO
+            </span>
+            <span class="font-mono text-xl font-bold text-amber-400">$24 USD</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="menu_item3_title">
+            Yellow Catuai Lavado Clásico
+          </h3>
+          <p class="text-stone-300 text-sm font-sans font-light leading-relaxed mb-6" data-i18n="menu_item3_desc">
+            Taza limpia y brillante con notas de mandarina, avellana tostada y dulzura sostenida de caramelo artesanal.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center font-mono text-xs text-stone-400">
+          <span>Altitud: 1,550m</span>
+          <span>SCA: 87.5</span>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="bg-stone-900 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-500/10 text-amber-300 font-mono text-[10px] tracking-widest uppercase border border-amber-500/30" data-i18n="menu_tag_coldbrew">
+              COLD BREW • INFUSIÓN
+            </span>
+            <span class="font-mono text-xl font-bold text-amber-400">$18 USD</span>
+          </div>
+          <h3 class="text-2xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="menu_item4_title">
+            Cold Brew Reserva Nitro 24 Horas
+          </h3>
+          <p class="text-stone-300 text-sm font-sans font-light leading-relaxed mb-6" data-i18n="menu_item4_desc">
+            Extracción lenta en frío infundida con nitrógeno para una textura cremosa con matices de flor de cacao y frambuesa.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center font-mono text-xs text-stone-400">
+          <span>Proceso: Cold Nitro</span>
+          <span>Edición Limitada</span>
+        </div>
+      </div>
+
     </div>
 
   </div>
