@@ -40,45 +40,46 @@ import BottomNav from '../components/BottomNav.astro';
           <span class="font-sans font-black tracking-tighter text-3xl text-white uppercase block mb-4">
             COFFEE SECRET<span class="text-amber-400 font-serif italic text-2xl font-normal">.cr</span>
           </span>
-          <p class="text-gray-400 font-sans font-light text-sm leading-relaxed mb-6">
-            An elevated specialty coffee destination hidden in the volcanic cloud forests of Turrialba, Costa Rica. Sourced with devotion, roasted for clarity, delivered worldwide.
+          <p class="text-gray-400 font-sans font-light text-sm leading-relaxed mb-6" data-i18n="footer_desc">
+            Un destino elevado de café de especialidad escondido en los bosques nubosos volcánicos de Turrialba, Costa Rica. Cultivado con devoción, tostado para máxima claridad, enviado a todo el mundo.
           </p>
-          <div class="text-amber-400 font-bold uppercase tracking-widest text-[11px]">
-            SCA Certified • Direct Trade Estate
+          <div class="text-amber-400 font-bold uppercase tracking-widest text-[11px]" data-i18n="footer_sca">
+            Certificación SCA • Finca de Comercio Directo
           </div>
         </div>
 
         <!-- Explore Links -->
         <div>
-          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4">Explore</h4>
+          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4" data-i18n="footer_title_explore">Explorar</h4>
           <ul class="space-y-2.5 text-gray-300">
-            <li><a href="#menu" class="hover:text-amber-400 transition-colors">Shop Micro-Lots</a></li>
-            <li><a href="#origin" class="hover:text-amber-400 transition-colors">Our Mission</a></li>
-            <li><a href="#awards" class="hover:text-amber-400 transition-colors">Recognition</a></li>
-            <li><a href="#timeline" class="hover:text-amber-400 transition-colors">Seed to Cup</a></li>
-            <li><a href="#booking" class="hover:text-amber-400 transition-colors">Tasting Room</a></li>
+            <li><a href="#menu" class="hover:text-amber-400 transition-colors" data-i18n="footer_link_microlots">Comprar Micro-Lotes</a></li>
+            <li><a href="#origin" class="hover:text-amber-400 transition-colors" data-i18n="footer_link_mission">Nuestra Misión</a></li>
+            <li><a href="#awards" class="hover:text-amber-400 transition-colors" data-i18n="footer_link_awards">Reconocimientos</a></li>
+            <li><a href="#timeline" class="hover:text-amber-400 transition-colors" data-i18n="footer_link_process">De la Semilla a la Taza</a></li>
+            <li><a href="#booking" class="hover:text-amber-400 transition-colors" data-i18n="footer_link_tasting">Sala de Cata</a></li>
           </ul>
         </div>
 
         <!-- Locations -->
         <div>
-          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4">Locations</h4>
+          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4" data-i18n="footer_title_locations">Ubicación</h4>
           <ul class="space-y-2.5 text-gray-300 font-sans text-xs">
-            <li class="font-bold font-mono text-white">Turrialba Estate:</li>
-            <li>KM 14 Volcán Turrialba Road</li>
+            <li class="font-bold font-mono text-white" data-i18n="footer_estate">Finca Turrialba:</li>
+            <li data-i18n="footer_address">KM 14 Ruta Volcán Turrialba</li>
           </ul>
         </div>
 
         <!-- Contact & Newsletter -->
         <div>
-          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4">Contact</h4>
+          <h4 class="text-amber-400 font-bold uppercase tracking-widest mb-4" data-i18n="footer_title_contact">Contacto</h4>
           <p class="text-gray-300 mb-2">WhatsApp: +506 8888 9999</p>
           <p class="text-gray-300 mb-4">concierge@coffeesecretturrialba.cr</p>
           <a
             href="#booking"
             class="inline-block px-4 py-2 bg-white text-black font-mono text-[11px] uppercase font-bold tracking-widest hover:bg-amber-400 transition-colors"
+            data-i18n="footer_inquire"
           >
-            Inquire Reserve
+            Consultar Reserva
           </a>
         </div>
 
@@ -86,11 +87,11 @@ import BottomNav from '../components/BottomNav.astro';
 
       <!-- Footer Bottom -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-gray-500 text-[11px]">
-        <p>© {new Date().getFullYear()} Coffee Secret Turrialba. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} <span data-i18n="footer_rights">Coffee Secret Turrialba. Todos los derechos reservados.</span></p>
         <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-          <a href="#" class="hover:text-white transition-colors">Costa Rica Origin</a>
+          <a href="#" class="hover:text-white transition-colors" data-i18n="footer_privacy">Política de Privacidad</a>
+          <a href="#" class="hover:text-white transition-colors" data-i18n="footer_terms">Términos de Servicio</a>
+          <a href="#" class="hover:text-white transition-colors" data-i18n="footer_origin">Origen Costa Rica</a>
         </div>
       </div>
 
