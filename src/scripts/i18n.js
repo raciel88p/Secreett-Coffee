@@ -36,6 +36,13 @@ export const translations = {
     award3_title: "CATA NACIONAL DE ESPECIALIDAD",
     award3_desc: "Primer lugar en la categoría de Innovación en Fermentación Controlada.",
 
+    // Stories Bar Tags
+    story_tag_1: "Volcán",
+    story_tag_2: "Geisha",
+    story_tag_3: "Tasting",
+    story_tag_4: "Proceso",
+    story_tag_5: "Pour Over",
+
     // Story
     story_badge: "NUESTRA HISTORIA Y TERROIR",
     story_title_1: "EL SECRETO MEJOR GUARDADO",
@@ -154,6 +161,13 @@ export const translations = {
     award2_desc: "Honored for exceptional cup profiles featuring jasmine and wild forest honey notes.",
     award3_title: "NATIONAL SPECIALTY CUPPING",
     award3_desc: "First Place in Controlled Fermentation Innovation.",
+
+    // Stories Bar Tags
+    story_tag_1: "Volcano",
+    story_tag_2: "Geisha",
+    story_tag_3: "Tasting",
+    story_tag_4: "Process",
+    story_tag_5: "Pour Over",
 
     // Story
     story_badge: "OUR STORY & TERROIR",
