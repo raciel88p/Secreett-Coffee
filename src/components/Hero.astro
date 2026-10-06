@@ -1,7 +1,7 @@
 ---
 ---
 
-<section class="relative bg-[#050505] text-white overflow-hidden min-h-[92vh] lg:min-h-screen flex flex-col justify-between">
+<section class="relative bg-stone-950 text-white overflow-hidden min-h-[92vh] lg:min-h-screen flex flex-col justify-between">
 
   <!-- Background Video Overlay -->
   <div class="absolute inset-0 z-0">
@@ -16,7 +16,7 @@
       <source src="https://assets.mixkit.co/videos/preview/mixkit-barista-pouring-coffee-into-a-cup-41009-large.mp4" type="video/mp4" />
       <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-beans-falling-41008-large.mp4" type="video/mp4" />
     </video>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-[#050505]/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/70"></div>
   </div>
 
   <!-- Hero Content Grid -->
@@ -24,56 +24,58 @@
 
     <div class="max-w-4xl">
       <!-- Badge / Subtitle -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#050505]/80 backdrop-blur-md border border-[#c5a059]/30 text-[#c5a059] text-xs font-mono tracking-widest uppercase mb-6 rounded-sm">
-        <span class="w-2 h-2 rounded-full bg-[#c5a059] animate-pulse"></span>
-        Costa Rica • Turrialba Volcanic Micro-lot
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-stone-950/80 backdrop-blur-md border border-amber-500/30 text-amber-400 text-xs font-mono tracking-widest uppercase mb-6 rounded-sm">
+        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <span data-i18n="hero_badge">COSTA RICA • MICRO-LOTE VOLCÁNICO TURRIALBA</span>
       </div>
 
       <!-- Main Headline -->
       <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.92] mb-6 text-white">
-        COFFEE <br/>
-        <span class="font-serif italic font-normal text-[#c5a059] lowercase">secret</span> <br/>
-        TURRIALBA.
+        <span data-i18n="hero_title_1">COFFEE</span> <br/>
+        <span class="font-serif italic font-normal text-amber-400 lowercase" data-i18n="hero_title_2">secret</span> <br/>
+        <span data-i18n="hero_title_3">TURRIALBA.</span>
       </h1>
 
-      <p class="text-lg sm:text-2xl font-light text-gray-300 max-w-2xl mb-8 leading-relaxed font-sans">
-        A hidden specialty coffee destination tucked within the volcanic cloud forests of Costa Rica. Recognized for extraordinary single-origin micro-lots, anaerobic fermentations, and sensory cupping sessions.
+      <p class="text-lg sm:text-2xl font-light text-stone-300 max-w-2xl mb-8 leading-relaxed font-sans" data-i18n="hero_desc">
+        Un destino secreto de café de especialidad escondido en los bosques nubosos volcánicos de Costa Rica. Reconocido por extraordinarios micro-lotes de origen único, fermentaciones experimentales y experiencias de cata personalizadas.
       </p>
 
       <!-- CTAs -->
       <div class="flex flex-wrap items-center gap-4">
         <a
-          href="#menu"
-          class="px-8 py-4 bg-[#c5a059] text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#e6d7c3] transition-all duration-300 shadow-xl"
+          href="#booking"
+          class="px-8 py-4 bg-amber-500 text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-amber-400 transition-all duration-300 shadow-xl"
+          data-i18n="hero_btn_reserve"
         >
-          Explore Micro-Lots
+          RESERVAR CATA PRIVADA
         </a>
         <a
-          href="#booking"
-          class="px-8 py-4 bg-transparent border border-[#c5a059]/50 text-[#e6d7c3] font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059]/10 hover:border-[#c5a059] transition-all duration-300 backdrop-blur-sm"
+          href="#menu"
+          class="px-8 py-4 bg-transparent border border-amber-500/50 text-stone-200 font-mono text-xs uppercase tracking-widest font-bold hover:bg-amber-500/10 hover:border-amber-400 transition-all duration-300 backdrop-blur-sm"
+          data-i18n="hero_btn_explore"
         >
-          Book Tasting Room
+          EXPLORAR MENÚ DE CAFE
         </a>
       </div>
     </div>
 
     <!-- Bottom Highlights Ticker / Bar -->
-    <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs uppercase text-gray-300 tracking-wider">
-      <div class="border-l-2 border-[#c5a059] pl-4">
-        <span class="block text-gray-400 text-[10px]">Cupping Score</span>
-        <span class="text-[#c5a059] text-lg font-bold">92.5+ SCA</span>
+    <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs uppercase text-stone-300 tracking-wider">
+      <div class="border-l-2 border-amber-500 pl-4">
+        <span class="block text-stone-400 text-[10px]" data-i18n="stat_sca_label">PUNTAJE SCA</span>
+        <span class="text-amber-400 text-lg font-bold">92.5+ SCA</span>
       </div>
       <div class="border-l-2 border-white/20 pl-4">
-        <span class="block text-gray-400 text-[10px]">Altitude</span>
-        <span class="text-white text-lg font-bold">1,850 Meters</span>
+        <span class="block text-stone-400 text-[10px]" data-i18n="stat_altitude_label">ALTITUD</span>
+        <span class="text-white text-lg font-bold">1,650 METROS</span>
       </div>
       <div class="border-l-2 border-white/20 pl-4">
-        <span class="block text-gray-400 text-[10px]">Terroir</span>
-        <span class="text-white text-lg font-bold">Active Volcanic Ash</span>
+        <span class="block text-stone-400 text-[10px]">TERROIR</span>
+        <span class="text-white text-lg font-bold">CENIZA VOLCÁNICA</span>
       </div>
-      <div class="border-l-2 border-[#c5a059] pl-4">
-        <span class="block text-gray-400 text-[10px]">Varieties</span>
-        <span class="text-[#c5a059] text-lg font-bold">Geisha, Sidra & Bourbon</span>
+      <div class="border-l-2 border-amber-500 pl-4">
+        <span class="block text-stone-400 text-[10px]" data-i18n="stat_lot_label">PRODUCCIÓN</span>
+        <span class="text-amber-400 text-lg font-bold">GEISHA & BOURBON</span>
       </div>
     </div>
 

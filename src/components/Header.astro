@@ -3,13 +3,13 @@
 
 <!-- Announcement Bar -->
 <div class="bg-black text-white text-[11px] font-mono tracking-widest uppercase py-2 px-4 border-b border-white/10 text-center flex justify-between items-center z-50 relative">
-  <span class="hidden sm:inline-block text-gray-400">Turrialba Volcanic Micro-lot Coffee</span>
-  <span class="mx-auto sm:mx-0 font-semibold tracking-wider text-amber-300">Complimentary Global Express Shipping on Tasting Reserve Bundles</span>
-  <a href="#menu" class="hidden md:inline-block text-white hover:text-amber-300 underline underline-offset-4 transition-colors">Shop Micro-Lots &rarr;</a>
+  <span class="hidden sm:inline-block text-stone-400" data-i18n="topbar_tag">CAFÉ DE MICRO-LOTE VOLCÁNICO DE TURRIALBA</span>
+  <span class="mx-auto sm:mx-0 font-semibold tracking-wider text-amber-300" data-i18n="topbar_promo">ENVÍO EXPRESS INTERNACIONAL DE CORTESÍA EN PAQUETES DE RESERVA</span>
+  <a href="#menu" class="hidden md:inline-block text-white hover:text-amber-300 underline underline-offset-4 transition-colors" data-i18n="topbar_link">VER MICRO-LOTES →</a>
 </div>
 
 <!-- Main Global Header -->
-<header class="sticky top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="main-header">
+<header class="sticky top-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="main-header">
   <div class="max-w-[1600px] mx-auto px-4 sm:px-8">
     <div class="flex items-center justify-between h-16 sm:h-20">
 
@@ -21,76 +21,106 @@
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-[0.2em] font-medium text-gray-300">
-        <a href="#menu" class="hover:text-amber-400 transition-colors py-2">
-          Shop Coffee
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-[0.2em] font-medium text-stone-300">
+        <a href="#menu" class="hover:text-amber-400 transition-colors py-2" data-i18n="nav_coffee">
+          CAFÉ
         </a>
-        <a href="#origin" class="hover:text-amber-400 transition-colors py-2">
-          Our Mission
+        <a href="#origin" class="hover:text-amber-400 transition-colors py-2" data-i18n="nav_story">
+          NUESTRA MISIÓN
         </a>
-        <a href="#awards" class="hover:text-amber-400 transition-colors py-2">
-          Recognition
+        <a href="#awards" class="hover:text-amber-400 transition-colors py-2" data-i18n="nav_awards">
+          RECONOCIMIENTO
         </a>
-        <a href="#timeline" class="hover:text-amber-400 transition-colors py-2">
-          Seed to Cup
+        <a href="#timeline" class="hover:text-amber-400 transition-colors py-2" data-i18n="nav_timeline">
+          DE LA SEMILLA A LA TAZA
         </a>
-        <a href="#tourism" class="hover:text-amber-400 transition-colors py-2">
-          Locations
+        <a href="#tourism" class="hover:text-amber-400 transition-colors py-2" data-i18n="nav_location">
+          UBICACIÓN
         </a>
-        <a href="#gallery" class="hover:text-amber-400 transition-colors py-2">
-          Visuals
+        <a href="#gallery" class="hover:text-amber-400 transition-colors py-2" data-i18n="nav_gallery">
+          GALERÍA
         </a>
       </nav>
 
-      <!-- CTA Action Button -->
+      <!-- Language Selector & CTA Action Button -->
       <div class="hidden lg:flex items-center gap-6">
+        <!-- Language Switcher -->
+        <div class="flex items-center bg-stone-900 border border-white/10 rounded p-1 font-mono text-xs">
+          <button data-lang="es" class="lang-btn px-2.5 py-1 rounded transition-colors text-stone-400 hover:text-white">ES</button>
+          <button data-lang="en" class="lang-btn px-2.5 py-1 rounded transition-colors text-stone-400 hover:text-white">EN</button>
+        </div>
+
         <a
           href="#booking"
           class="px-6 py-2.5 text-xs font-mono uppercase tracking-widest font-bold text-black bg-white hover:bg-amber-400 transition-all duration-200"
+          data-i18n="nav_reserve"
         >
-          Book Experience
+          RESERVAR EXPERIENCIA
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <button
-        id="mobile-menu-btn"
-        class="lg:hidden text-white hover:text-amber-400 focus:outline-none p-2"
-        aria-label="Toggle navigation menu"
-      >
-        <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-        <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
+      <!-- Mobile Menu & Lang Toggle Container -->
+      <div class="flex lg:hidden items-center gap-3">
+        <div class="flex items-center bg-stone-900 border border-white/10 rounded p-0.5 font-mono text-[10px]">
+          <button data-lang="es" class="lang-btn px-2 py-0.5 rounded transition-colors text-stone-400">ES</button>
+          <button data-lang="en" class="lang-btn px-2 py-0.5 rounded transition-colors text-stone-400">EN</button>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="text-white hover:text-amber-400 focus:outline-none p-2"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
 
     </div>
   </div>
 
   <!-- Mobile Navigation Overlay -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-black border-b border-white/10 px-6 py-8 space-y-6">
-    <nav class="flex flex-col space-y-4 text-sm font-mono tracking-widest uppercase font-semibold text-gray-200">
-      <a href="#menu" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Shop Coffee</a>
-      <a href="#origin" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Our Mission</a>
-      <a href="#awards" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Recognition</a>
-      <a href="#timeline" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Seed to Cup</a>
-      <a href="#tourism" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Locations</a>
-      <a href="#gallery" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5">Visuals</a>
+  <div id="mobile-menu" class="hidden lg:hidden bg-stone-950 border-b border-white/10 px-6 py-8 space-y-6">
+    <nav class="flex flex-col space-y-4 text-sm font-mono tracking-widest uppercase font-semibold text-stone-200">
+      <a href="#menu" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5" data-i18n="nav_coffee">CAFÉ</a>
+      <a href="#origin" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5" data-i18n="nav_story">NUESTRA MISIÓN</a>
+      <a href="#awards" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5" data-i18n="nav_awards">RECONOCIMIENTO</a>
+      <a href="#timeline" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5" data-i18n="nav_timeline">DE LA SEMILLA A LA TAZA</a>
+      <a href="#tourism" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5" data-i18n="nav_location">UBICACIÓN</a>
+      <a href="#gallery" class="mobile-nav-link hover:text-amber-400 py-2 border-b border-white/5" data-i18n="nav_gallery">GALERÍA</a>
     </nav>
     <div class="pt-4 flex flex-col gap-4">
       <a
         href="#booking"
         class="mobile-nav-link text-center px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold text-black bg-white hover:bg-amber-400 transition-colors"
+        data-i18n="nav_reserve"
       >
-        Book Experience
+        RESERVAR EXPERIENCIA
       </a>
     </div>
   </div>
 </header>
 
 <script>
+  import { initI18n, setLanguage } from '../scripts/i18n.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initI18n();
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const lang = (e.currentTarget as HTMLElement).getAttribute('data-lang');
+        if (lang) {
+          setLanguage(lang);
+        }
+      });
+    });
+  });
+
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const openIcon = document.getElementById('menu-icon-open');

@@ -1,123 +1,62 @@
 ---
-const spots = [
-  {
-    name: "Volcán Turrialba National Park",
-    distance: "14 km from Estate",
-    description: "Hike crater trails through cloud forests with panoramic views spanning both Pacific and Caribbean horizons.",
-    tag: "Volcano Trail"
-  },
-  {
-    name: "Pacuare World-Class White Water",
-    distance: "25 km from Estate",
-    description: "Navigate pristine canyon rapids surrounded by untouched rainforest and cascading waterfalls.",
-    tag: "Eco Adventure"
-  },
-  {
-    name: "Guayabo National Monument",
-    distance: "18 km from Estate",
-    description: "Explore Costa Rica's most significant pre-Columbian archaeological ancient stone city ruins.",
-    tag: "Ancient Culture"
-  }
-];
 ---
 
-<section id="tourism" class="py-24 bg-[#050505] text-white border-t border-white/10">
+<section id="tourism" class="py-24 bg-stone-900 text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
-    <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-8 border-b border-white/10 gap-6">
-      <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
-          Destination Costa Rica
-        </span>
-        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
-          VISIT OUR <span class="font-serif italic font-normal text-[#c5a059]">locations</span>
-        </h2>
-      </div>
-      <p class="text-gray-300 font-sans text-sm sm:text-base max-w-md leading-relaxed">
-        Nestled in the lush volcanic valley of Turrialba, surrounded by cloud forests, white water rivers, and pre-Columbian heritage sites.
+    <div class="max-w-3xl mb-16">
+      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-3" data-i18n="tourism_badge">
+        DESTINO TURÍSTICO TURRIALBA
+      </span>
+      <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-6">
+        <span data-i18n="tourism_title_1">DESCUBRA EL ENTORNO</span> <span class="font-serif italic font-normal text-amber-400" data-i18n="tourism_title_2">DE TURRIALBA, COSTA RICA.</span>
+      </h2>
+      <p class="text-stone-300 font-sans text-base leading-relaxed font-light" data-i18n="tourism_desc">
+        Combine su experiencia de café de lujo con aventuras inolvidables en la cuna de la naturaleza y biodiversidad costarricense.
       </p>
     </div>
 
-    <!-- Locations Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      <!-- Location 1 -->
-      <div class="border border-[#c5a059]/30 bg-[#0d0d0d] p-8 sm:p-12 flex flex-col justify-between hover:border-[#c5a059] transition-all duration-300">
+      <!-- Attraction 1 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-[10px] font-mono uppercase tracking-widest font-bold bg-[#c5a059] text-black px-3 py-1">
-              Flagship Estate & Tasting Room
-            </span>
-            <span class="text-xs font-mono text-gray-400">KM 14 Volcano Road</span>
-          </div>
-          <h3 class="text-3xl font-black uppercase tracking-tight mb-4 group-hover:text-[#c5a059] transition-colors">
-            Turrialba Volcano Estate
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-widest block mb-4">PARQUE NACIONAL</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="attraction1_title">
+            Parque Nacional Volcán Turrialba
           </h3>
-          <p class="text-gray-300 text-sm font-sans font-light leading-relaxed mb-6">
-            Our original high-altitude farm and cupping laboratory. Experience coffee right where it is grown, surrounded by mist and volcanic soils.
+          <p class="text-stone-400 text-sm font-sans font-light leading-relaxed" data-i18n="attraction1_desc">
+            Caminatas escénicas con vistas a cráteres activos y vegetación de paramo altoandino.
           </p>
-          <div class="font-mono text-xs space-y-1 text-gray-300 mb-8 border-t border-white/10 pt-4">
-            <p><strong class="text-[#c5a059]">Hours:</strong> Tue – Sun | 8:00 AM – 5:00 PM</p>
-            <p><strong class="text-[#c5a059]">Phone:</strong> +506 8888 9999</p>
-            <p><strong class="text-[#c5a059]">GPS:</strong> 10.0247° N, 83.7656° W</p>
-          </div>
         </div>
-        <a
-          href="https://maps.google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block w-full text-center py-3.5 bg-[#c5a059] text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#e6d7c3] transition-colors shadow-lg"
-        >
-          Get Directions &rarr;
-        </a>
       </div>
 
-      <!-- Location 2 -->
-      <div class="border border-[#c5a059]/30 bg-[#0d0d0d] p-8 sm:p-12 flex flex-col justify-between hover:border-[#c5a059] transition-all duration-300">
+      <!-- Attraction 2 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
         <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-[10px] font-mono uppercase tracking-widest font-bold bg-[#c5a059]/20 border border-[#c5a059]/50 text-[#e6d7c3] px-3 py-1">
-              Urban Tasting Lounge
-            </span>
-            <span class="text-xs font-mono text-gray-400">Escazú Avenue</span>
-          </div>
-          <h3 class="text-3xl font-black uppercase tracking-tight mb-4">
-            San José Reserve Lounge
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-widest block mb-4">AVENTURA EN RÍO</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="attraction2_title">
+            Rafting en el Río Pacuare
           </h3>
-          <p class="text-gray-300 text-sm font-sans font-light leading-relaxed mb-6">
-            Our intimate city espresso bar offering pour-over flights, espresso cocktails, and fresh roasted micro-lot bag pickup.
+          <p class="text-stone-400 text-sm font-sans font-light leading-relaxed" data-i18n="attraction2_desc">
+            Uno de los ríos más bellos del mundo para rafting entre cañones y selva virgen.
           </p>
-          <div class="font-mono text-xs space-y-1 text-gray-300 mb-8 border-t border-white/10 pt-4">
-            <p><strong class="text-[#c5a059]">Hours:</strong> Mon – Sat | 7:00 AM – 7:00 PM</p>
-            <p><strong class="text-[#c5a059]">Phone:</strong> +506 8888 9988</p>
-            <p><strong class="text-[#c5a059]">City Center:</strong> San José, Costa Rica</p>
-          </div>
         </div>
-        <a
-          href="https://maps.google.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block w-full text-center py-3.5 bg-transparent border border-[#c5a059] text-[#e6d7c3] font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059] hover:text-black transition-colors"
-        >
-          Get Directions &rarr;
-        </a>
       </div>
 
-    </div>
-
-    <!-- Nearby Tourism Spots Grid -->
-    <div class="pt-12 border-t border-white/10">
-      <h3 class="text-2xl font-black uppercase tracking-tight mb-8">Explore Turrialba Valley</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {spots.map((spot) => (
-          <div class="p-6 border border-[#c5a059]/20 bg-[#0d0d0d] hover:border-[#c5a059] transition-colors">
-            <span class="text-[10px] font-mono uppercase tracking-widest font-bold text-[#c5a059] block mb-2">{spot.tag} • {spot.distance}</span>
-            <h4 class="text-xl font-bold uppercase tracking-tight mb-2">{spot.name}</h4>
-            <p class="text-xs text-gray-400 font-sans leading-relaxed">{spot.description}</p>
-          </div>
-        ))}
+      <!-- Attraction 3 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <span class="text-amber-400 font-mono text-xs uppercase tracking-widest block mb-4">HISTORIA Y ARQUEOLOGÍA</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-3 text-white" data-i18n="attraction3_title">
+            Monumento Nacional Guayabo
+          </h3>
+          <p class="text-stone-400 text-sm font-sans font-light leading-relaxed" data-i18n="attraction3_desc">
+            El sitio arqueológico prehispánico más importante de Costa Rica rodeado de bosque de montaña.
+          </p>
+        </div>
       </div>
+
     </div>
 
   </div>

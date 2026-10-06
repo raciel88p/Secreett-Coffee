@@ -1,96 +1,64 @@
 ---
-const steps = [
-  {
-    step: "01",
-    title: "High-Altitude Agroforestry",
-    location: "Turrialba Cloud Forest • 1,850m",
-    desc: "Shade-grown under native rainforest canopy, enriched by active volcanic mineral deposits and organic leaf mulch.",
-    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    step: "02",
-    title: "Selective Brix Harvesting",
-    location: "Triple-Pass Hand Picking",
-    desc: "Master pickers strictly select cherries exceeding 22° Brix sugar concentration to ensure supreme sweetness.",
-    image: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    step: "03",
-    title: "Anaerobic Fermentation",
-    location: "Temperature Controlled Stainless Tanks",
-    desc: "Sealed oxygen-free tanks ferment whole cherries for 120 hours, unlocking delicate jasmine and tropical acidity notes.",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    step: "04",
-    title: "African Solar Bed Drying",
-    location: "Raised Micro-Lot Decks",
-    desc: "Slow sun-drying over 25 days with hourly manual turning guarantees uniform moisture stabilization and longevity.",
-    image: "https://images.unsplash.com/photo-1587734195503-904fca47e0e9?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    step: "05",
-    title: "Thermal Micro-Batch Roasting",
-    location: "Small-Lot Custom Profiles",
-    desc: "Roasted in 2kg small lots with real-time sensory thermal curves to accentuate intrinsic varietal attributes.",
-    image: "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=800&auto=format&fit=crop"
-  }
-];
 ---
 
-<section id="timeline" class="py-24 bg-[#050505] text-white border-t border-white/10">
+<section id="timeline" class="py-24 bg-stone-900 text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
     <!-- Section Header -->
-    <div class="mb-16 pb-8 border-b border-white/10 flex flex-col md:flex-row md:items-end justify-between gap-6">
-      <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
-          Uncompromising Craftsmanship
-        </span>
-        <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight">
-          THE SEED-TO-CUP <span class="font-serif italic font-normal text-[#c5a059]">journey</span>
-        </h2>
-      </div>
-      <p class="text-gray-400 font-sans text-sm max-w-md">
-        Every harvest step is strictly monitored by our agronomic tea and certified Q-Graders.
-      </p>
+    <div class="max-w-3xl mb-16">
+      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-3" data-i18n="timeline_badge">
+        EL PROCESO ARTESANAL
+      </span>
+      <h2 class="text-4xl sm:text-6xl font-black uppercase tracking-tight mb-6">
+        <span data-i18n="timeline_title_1">DE LA SEMILLA</span> <span class="font-serif italic font-normal text-amber-400" data-i18n="timeline_title_2">A LA TAZA PERFECTA.</span>
+      </h2>
     </div>
 
-    <!-- Timeline Grid Steps -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {steps.map((st) => (
-        <div class="border border-[#c5a059]/20 bg-[#0d0d0d] p-6 sm:p-8 flex flex-col justify-between group hover:border-[#c5a059] transition-all duration-300">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-4xl font-mono font-bold text-[#c5a059]">{st.step}</span>
-              <span class="text-[10px] font-mono uppercase tracking-widest text-gray-300 border border-[#c5a059]/30 px-2.5 py-1 bg-[#c5a059]/10">
-                {st.location}
-              </span>
-            </div>
-
-            <div class="aspect-video overflow-hidden mb-6 bg-black border border-white/10">
-              <img
-                src={st.image}
-                alt={st.title}
-                loading="lazy"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90 contrast-110"
-              />
-            </div>
-
-            <h3 class="text-2xl font-black uppercase tracking-tight mb-3 group-hover:text-[#c5a059] transition-colors">
-              {st.title}
-            </h3>
-            <p class="text-gray-300 text-sm font-light leading-relaxed font-sans">
-              {st.desc}
-            </p>
-          </div>
-
-          <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest">
-            <span class="text-[#c5a059]">Stage {st.step} Complete</span>
-            <span class="text-gray-500">Turrialba QC</span>
-          </div>
+    <!-- Timeline Steps Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Step 1 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <span class="text-4xl font-mono font-black text-amber-400 block mb-6" data-i18n="step1_num">01</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-4" data-i18n="step1_title">COSECHA SELECTIVA EN ALTURA</h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="step1_desc">
+            Recolección manual exclusiva de frutos en su máximo grado de Brix (azúcar natural) a 1,650 metros sobre el nivel del mar.
+          </p>
         </div>
-      ))}
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <span class="text-4xl font-mono font-black text-amber-400 block mb-6" data-i18n="step2_num">02</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-4" data-i18n="step2_title">FERMENTACIÓN ANAERÓBICA</h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="step2_desc">
+            Procesamiento en tanques sellados sin oxígeno durante 72 a 120 horas con levaduras autóctonas del bosque nuboso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <span class="text-4xl font-mono font-black text-amber-400 block mb-6" data-i18n="step3_num">03</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-4" data-i18n="step3_title">SECADO LENTO EN CAMAS AFRICANAS</h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="step3_desc">
+            Secado controlado al sol durante 25 días bajo marquesinas que protegen el grano de la lluvia tropical de Turrialba.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="bg-stone-950 border border-white/10 p-8 flex flex-col justify-between hover:border-amber-400 transition-colors">
+        <div>
+          <span class="text-4xl font-mono font-black text-amber-400 block mb-6" data-i18n="step4_num">04</span>
+          <h3 class="text-xl font-black uppercase tracking-tight mb-4" data-i18n="step4_title">TUESTE DE PRECISIÓN Y CATA</h3>
+          <p class="text-stone-400 text-sm font-light leading-relaxed font-sans" data-i18n="step4_desc">
+            Tueste artesanal en lotes ultralimitados configurado para exaltar las notas complejas de flor de café, cítricos y cacao fino.
+          </p>
+        </div>
+      </div>
     </div>
 
   </div>

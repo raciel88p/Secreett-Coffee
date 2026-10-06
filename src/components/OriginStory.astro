@@ -1,77 +1,42 @@
 ---
 ---
 
-<section id="origin" class="py-24 bg-[#050505] text-white border-t border-white/10">
+<section id="origin" class="py-24 bg-stone-950 text-white border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
     <!-- Headline Statement -->
     <div class="max-w-4xl mb-16">
-      <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-3">
-        Origin & Terroir
+      <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-3" data-i18n="story_badge">
+        NUESTRA HISTORIA Y TERROIR
       </span>
       <h2 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-[0.95] mb-8">
-        ELEVATING COFFEE FROM A DAILY ROUTINE TO AN <span class="font-serif italic font-normal text-[#c5a059]">extraordinary art.</span>
+        <span data-i18n="story_title_1">EL SECRETO MEJOR GUARDADO</span> <br/>
+        <span class="font-serif italic font-normal text-amber-400 lowercase" data-i18n="story_title_2">DE LAS MONTAÑAS DE TURRIALBA.</span>
       </h2>
-      <p class="text-lg sm:text-2xl font-light leading-relaxed text-gray-300 font-sans">
-        Nestled high on the mineral-laden slopes of Turrialba Volcano in Cartago, Costa Rica, our estate merges native shade-grown agroforestry with precision micro-batch roasting.
+      <p class="text-lg sm:text-2xl font-light leading-relaxed text-stone-300 font-sans mb-6" data-i18n="story_p1">
+        Enclavado a más de 1,600 metros sobre el nivel del mar en la vertiente atlántica del Volcán Turrialba, Coffee Secret nació como un santuario exclusivo para amantes del café de especialidad.
+      </p>
+      <p class="text-base sm:text-lg font-light leading-relaxed text-stone-400 font-sans" data-i18n="story_p2">
+        La combinación de ceniza volcánica rica en nutrientes, la humedad del bosque nuboso y la niebla constante crea un microclima único en el mundo. Aquí, el fruto del café madura lentamente, concentrando azúcares naturales y acidez brillante.
       </p>
     </div>
 
-    <!-- Side-by-Side Overlay Media Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-16">
-
-      <!-- Card 1 -->
-      <div class="relative group overflow-hidden bg-[#0d0d0d] border border-white/10 text-white min-h-[500px] flex flex-col justify-end p-8 sm:p-12 hover:border-[#c5a059]/60 transition-all duration-500">
-        <img
-          src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=1200&auto=format&fit=crop"
-          alt="Turrialba Volcanic Estate"
-          loading="lazy"
-          class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-70 transition-all duration-700 filter contrast-125"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
-
-        <div class="relative z-10">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
-            Volcanic Chemistry
-          </span>
-          <h3 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-            Volcanic Soil Terroir
-          </h3>
-          <p class="text-gray-300 text-sm sm:text-base font-light mb-6 max-w-lg leading-relaxed">
-            High above the cloud line at 1,850m elevation, active volcanic ash enriches the soil with essential minerals, resulting in dense cherries packed with complex sugars and floral notes.
-          </p>
-          <a href="#timeline" class="inline-block px-6 py-3 bg-[#c5a059] text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#e6d7c3] transition-colors">
-            Discover Process &rarr;
-          </a>
+    <!-- Stats Callout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-16 border-y border-white/10 py-12">
+      <div class="flex items-start gap-6">
+        <span class="text-5xl sm:text-6xl font-mono font-black text-amber-400" data-i18n="story_stat1_num">1,650m</span>
+        <div>
+          <h3 class="text-lg font-bold uppercase tracking-wider mb-1">ELEVACIÓN VOLCÁNICA</h3>
+          <p class="text-stone-400 text-sm font-sans" data-i18n="story_stat1_label">Elevación volcánica en los bosques nubosos de Turrialba</p>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="relative group overflow-hidden bg-[#0d0d0d] border border-white/10 text-white min-h-[500px] flex flex-col justify-end p-8 sm:p-12 hover:border-[#c5a059]/60 transition-all duration-500">
-        <img
-          src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=1200&auto=format&fit=crop"
-          alt="Coffee Roasting Precision"
-          loading="lazy"
-          class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-70 transition-all duration-700 filter contrast-125"
-        />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
-
-        <div class="relative z-10">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#c5a059] font-bold block mb-2">
-            Artisanal Precision
-          </span>
-          <h3 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-            Micro-Batch Roasting
-          </h3>
-          <p class="text-gray-300 text-sm sm:text-base font-light mb-6 max-w-lg leading-relaxed">
-            Every harvest lot is custom-profiled and roasted in 2kg small batches with thermal sensors, preserving delicate varietal aromatics and vibrant origin characteristics.
-          </p>
-          <a href="#menu" class="inline-block px-6 py-3 bg-transparent border border-[#c5a059] text-[#e6d7c3] font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059] hover:text-black transition-colors">
-            Shop Micro-Lots &rarr;
-          </a>
+      <div class="flex items-start gap-6">
+        <span class="text-5xl sm:text-6xl font-mono font-black text-white" data-i18n="story_stat2_num">100%</span>
+        <div>
+          <h3 class="text-lg font-bold uppercase tracking-wider mb-1">COSECHA MANUAL</h3>
+          <p class="text-stone-400 text-sm font-sans" data-i18n="story_stat2_label">Cosecha manual selectiva grano por grano</p>
         </div>
       </div>
-
     </div>
 
   </div>
