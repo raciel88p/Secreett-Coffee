@@ -122,6 +122,25 @@ export const translations = {
     gallery_title_1: "EL ARTE DEL CAFÉ",
     gallery_title_2: "EN IMÁGENES.",
 
+    // Footer
+    footer_desc: "Un destino elevado de café de especialidad escondido en los bosques nubosos volcánicos de Turrialba, Costa Rica. Cultivado con devoción, tostado para máxima claridad, enviado a todo el mundo.",
+    footer_sca: "Certificación SCA • Finca de Comercio Directo",
+    footer_title_explore: "Explorar",
+    footer_link_microlots: "Comprar Micro-Lotes",
+    footer_link_mission: "Nuestra Misión",
+    footer_link_awards: "Reconocimientos",
+    footer_link_process: "De la Semilla a la Taza",
+    footer_link_tasting: "Sala de Cata",
+    footer_title_locations: "Ubicación",
+    footer_estate: "Finca Turrialba:",
+    footer_address: "KM 14 Ruta Volcán Turrialba",
+    footer_title_contact: "Contacto",
+    footer_inquire: "Consultar Reserva",
+    footer_rights: "Coffee Secret Turrialba. Todos los derechos reservados.",
+    footer_privacy: "Política de Privacidad",
+    footer_terms: "Términos de Servicio",
+    footer_origin: "Origen Costa Rica",
+
     // WhatsApp
     whatsapp_text: "WHATSAPP CONCIERGE"
   },
@@ -247,6 +266,25 @@ export const translations = {
     gallery_badge: "VISUAL GALLERY",
     gallery_title_1: "THE ART OF COFFEE",
     gallery_title_2: "IN PICTURES.",
+
+    // Footer
+    footer_desc: "An elevated specialty coffee destination hidden in the volcanic cloud forests of Turrialba, Costa Rica. Sourced with devotion, roasted for clarity, delivered worldwide.",
+    footer_sca: "SCA Certified • Direct Trade Estate",
+    footer_title_explore: "Explore",
+    footer_link_microlots: "Shop Micro-Lots",
+    footer_link_mission: "Our Mission",
+    footer_link_awards: "Recognition",
+    footer_link_process: "Seed to Cup",
+    footer_link_tasting: "Tasting Room",
+    footer_title_locations: "Locations",
+    footer_estate: "Turrialba Estate:",
+    footer_address: "KM 14 Volcán Turrialba Road",
+    footer_title_contact: "Contact",
+    footer_inquire: "Inquire Reserve",
+    footer_rights: "Coffee Secret Turrialba. All rights reserved.",
+    footer_privacy: "Privacy Policy",
+    footer_terms: "Terms of Service",
+    footer_origin: "Costa Rica Origin",
 
     // WhatsApp
     whatsapp_text: "WHATSAPP CONCIERGE"
